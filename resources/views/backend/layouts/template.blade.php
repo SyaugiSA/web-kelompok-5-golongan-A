@@ -14,15 +14,16 @@
     <title>Material Pro Lite Template by WrapPixel</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/materialpro-lite/" />
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('backend/assets/images/favicon.png')}}">
     <!-- chartist CSS -->
-    <link href="../assets/plugins/chartist-js/dist/chartist.min.css" rel="stylesheet">
-    <link href="../assets/plugins/chartist-js/dist/chartist-init.css" rel="stylesheet">
-    <link href="../assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
+    {{-- {{asset ('backend/')}} --}}
+    <link href=  "{{asset('backend/assets/plugins/chartist-js/dist/chartist.min.css')}}" rel="stylesheet">
+    <link href= "{{asset('backend/assets/plugins/chartist-js/dist/chartist-init.css')}}" rel="stylesheet">
+    <link href="{{asset('backend/assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css')}}" rel="stylesheet">
     <!--This page css - Morris CSS -->
-    <link href="../assets/plugins/c3-master/c3.min.css" rel="stylesheet">
+    <link href="{{asset('backend/assets/plugins/c3-master/c3.min.css')}}" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="{{asset('backend/css/style.min.css')}}" rel="stylesheet">
 </head>
 
 <body>
@@ -54,14 +55,14 @@
                         <b class="logo-icon">
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img src="../assets/images/logo-light-icon.png" alt="homepage" class="dark-logo" />
+                            <img src="{{asset ('backend/assets/images/logo-light-icon.png')}}" alt="homepage" class="dark-logo" />
 
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text -->
                         <span class="logo-text">
                             <!-- dark Logo text -->
-                            <img src="../assets/images/logo-light-text.png" alt="homepage" class="dark-logo" />
+                            <img src="{{asset ('backend/assets/images/logo-light-text.png')}}" alt="homepage" class="dark-logo" />
 
                         </span>
                     </a>
@@ -72,7 +73,7 @@
                     <!-- toggle and nav items -->
                     <!-- ============================================================== -->
                     <a class="nav-toggler waves-effect waves-light text-white d-block d-md-none"
-                        href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+                        href="{{asset ('backend/javascript:void(0)')}}"><i class="ti-menu ti-close"></i></a>
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Logo -->
@@ -109,7 +110,7 @@
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="../assets/images/users/1.jpg" alt="user" class="profile-pic me-2">Markarn Doe
+                                <img src="{{asset ('backend/assets/images/users/1.jpg')}}" alt="user" class="profile-pic me-2">Markarn Doe
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown"></ul>
                         </li>
@@ -130,26 +131,27 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
-    <script src="../assets/plugins/jquery/dist/jquery.min.js"></script>
+    {{-- {{asset ('backend/')}} --}}
+    <script src="{{asset ('backend/assets/plugins/jquery/dist/jquery.min.js')}}"></script>
     <!-- Bootstrap tether Core JavaScript -->
-    <script src="../assets/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/app-style-switcher.js"></script>
+    <script src="{{asset ('backend/assets/plugins/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset ('backend/js/app-style-switcher.js')}}"></script>
     <!--Wave Effects -->
-    <script src="js/waves.js"></script>
+    <script src="{{asset ('backend/js/waves.js')}}"></script>
     <!--Menu sidebar -->
-    <script src="js/sidebarmenu.js"></script>
+    <script src="{{asset ('backend/js/sidebarmenu.js')}}"></script>
     <!-- ============================================================== -->
     <!-- This page plugins -->
     <!-- ============================================================== -->
     <!-- chartist chart -->
-    <script src="../assets/plugins/chartist-js/dist/chartist.min.js"></script>
-    <script src="../assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
+    <script src="{{asset ('backend/assets/plugins/chartist-js/dist/chartist.min.js')}}"></script>
+    <script src="{{asset ('backend/assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js')}}"></script>
     <!--c3 JavaScript -->
-    <script src="../assets/plugins/d3/d3.min.js"></script>
-    <script src="../assets/plugins/c3-master/c3.min.js"></script>
+    <script src="{{asset ('backend/assets/plugins/d3/d3.min.js')}}"></script>
+    <script src="{{asset ('backend/assets/plugins/c3-master/c3.min.js')}}"></script>
     <!--Custom JavaScript -->
-    <script src="js/pages/dashboards/dashboard1.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="{{asset ('backend/js/pages/dashboards/dashboard1.js')}}"></script>
+    <script src="{{asset ('backend/js/custom.js')}}"></script>
 </body>
 
 </html>
