@@ -18,8 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
-
 Route::group(
     ['namespace' => 'Backend'],
     function () {
@@ -29,3 +27,7 @@ Route::group(
         Route::put('kartutandapenduduk/update/{nik}', 'KartuTandaPendudukController@update');
     }
 );
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -4,11 +4,23 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
-use Illuminate\Auth\Authenticatable;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
+    /*
+    |--------------------------------------------------------------------------
+    | Login Controller
+    |--------------------------------------------------------------------------
+    |
+    | This controller handles authenticating users for the application and
+    | redirecting them to your home screen. The controller uses a trait
+    | to conveniently provide its functionality to your applications.
+    |
+    */
+
+    use AuthenticatesUsers;
 
     /**
      * Where to redirect users after login.
@@ -28,22 +40,21 @@ class LoginController extends Controller
     }
 
     public function login(Request $request){
-        $this->validate($request, [
-            'username'=> 'required|string',
-            'password'=> 'required|string|min:6'
+        $this->validate($request,[
+            'ID' => 'required',
+            'password' => 'required|string|min:8'
         ]);
 
-        $loginType = filter_var($request->username, FILTER_VALIDATE_EMAIL) ? 'email':'username';
+        $logintype = filter_var($request -> ID, FILTER_VALIDATE_EMAIL)? 'email':'NIK';
 
-        $login = [
-            $loginType => $request->username,
+        $login=[
+            $logintype => $request->ID,
             'password' => $request->password
         ];
 
         if(auth()->attempt($login)){
-            return redirect()->route('home');
+            return redirect()->route('dashboard');
         }
-
-        return redirect()->route('login')->with(['error'=>'Email/Password Salah!']);
+        return redirect()->route('login')->with(["error" => "NIK/Email salah!"]);
     }
 }
