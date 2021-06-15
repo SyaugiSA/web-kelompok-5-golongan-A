@@ -10,11 +10,15 @@
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="index.html" aria-expanded="false"><i class="mdi me-2 mdi-gauge"></i><span
                                     class="hide-menu">Dashboard</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                        {{-- <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="pages-profile.html" aria-expanded="false">
                                 <i class="mdi me-2 mdi-account-check"></i><span class="hide-menu">Profile</span></a>
-                        </li>
+                        </li> --}}
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                            href="{{url ('kartutandapenduduk')}}" aria-expanded="false">
+                            <i class="mdi me-2 mdi-account-check"></i><span class="hide-menu">KTP</span></a>
+                        </li>
+                        {{-- <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="table-basic.html" aria-expanded="false"><i class="mdi me-2 mdi-table"></i><span
                                     class="hide-menu">Table</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
@@ -35,7 +39,7 @@
                             <a href="https://www.wrappixel.com/templates/materialpro/"
                                 class="btn btn-warning text-white mt-4" target="_blank">Upgrade to
                                 Pro</a>
-                        </li>
+                        </li> --}}
                     </ul>
 
                 </nav>

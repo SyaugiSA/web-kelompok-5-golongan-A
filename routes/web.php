@@ -24,5 +24,8 @@ Route::group(
     ['namespace' => 'Backend'],
     function () {
         Route::resource('dashboard', 'DashboardController');
+        Route::resource('kartutandapenduduk', 'KartuTandaPendudukController');
+        Route::get('kartutandapenduduk/edit/{nik}', 'KartuTandaPendudukController@edit');
+        Route::put('kartutandapenduduk/update/{nik}', 'KartuTandaPendudukController@update');
     }
 );
