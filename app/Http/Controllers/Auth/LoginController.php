@@ -53,7 +53,7 @@ class LoginController extends Controller
         ];
 
         if(auth()->attempt($login)){
-            return redirect()->route('dashboard');
+            return redirect('dashboard');
         }
         return redirect()->route('login')->with(["error" => "NIK/Email salah!"]);
     }
