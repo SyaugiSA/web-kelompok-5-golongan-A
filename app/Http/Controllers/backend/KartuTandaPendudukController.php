@@ -16,11 +16,11 @@ class KartuTandaPendudukController extends Controller
     {
         // mengambil semua data yang ada pada table kartutandapenduduk
         // seperti syntax select * from kartutandapenduduk
-        $ktp_list = KartuTandaPenduduk::all();
+        // $ktp_list = KartuTandaPenduduk::all();
 
 
         //mengembalikan variable $ktp_list untuk ditampilan di view/backend.kartutandapenduduk.index
-        return view('backend.kartutandapenduduk.index', compact('ktp_list'));
+        return view('backend.kartutandapenduduk.index');
     }
 
     public function create()

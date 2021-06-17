@@ -8,38 +8,16 @@
                     <ul id="sidebarnav">
                         <!-- User Profile-->
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="index.html" aria-expanded="false"><i class="mdi me-2 mdi-gauge"></i><span
+                                href="{{url('dashboard')}}" aria-expanded="false"><i class="mdi me-2 mdi-gauge"></i><span
                                     class="hide-menu">Dashboard</span></a></li>
-                        {{-- <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="pages-profile.html" aria-expanded="false">
-                                <i class="mdi me-2 mdi-account-check"></i><span class="hide-menu">Profile</span></a>
-                        </li> --}}
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                             href="{{url ('kartutandapenduduk')}}" aria-expanded="false">
                             <i class="mdi me-2 mdi-account-check"></i><span class="hide-menu">KTP</span></a>
                         </li>
-                        {{-- <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="table-basic.html" aria-expanded="false"><i class="mdi me-2 mdi-table"></i><span
-                                    class="hide-menu">Table</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="icon-material.html" aria-expanded="false"><i
-                                    class="mdi me-2 mdi-emoticon"></i><span class="hide-menu">Icon</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="map-google.html" aria-expanded="false"><i class="mdi me-2 mdi-earth"></i><span
-                                    class="hide-menu">Google Map</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="pages-blank.html" aria-expanded="false"><i
-                                    class="mdi me-2 mdi-book-open-variant"></i><span class="hide-menu">Blank</span></a>
+                            href="{{url ('aktakelahiran')}}" aria-expanded="false">
+                            <i class="mdi me-2 mdi-account-check"></i><span class="hide-menu">Akta Kelahiran</span></a>
                         </li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="pages-error-404.html" aria-expanded="false"><i class="mdi me-2 mdi-help-circle"></i><span
-                                    class="hide-menu">Error 404</span></a>
-                        </li>
-                        <li class="text-center p-20 upgrade-btn">
-                            <a href="https://www.wrappixel.com/templates/materialpro/"
-                                class="btn btn-warning text-white mt-4" target="_blank">Upgrade to
-                                Pro</a>
-                        </li> --}}
                     </ul>
 
                 </nav>
@@ -60,8 +38,13 @@
                     </div>
                     <div class="col-4 link-wrap">
                         <!-- item-->
-                        <a href="" class="link" data-toggle="tooltip" title="" data-original-title="Logout"><i
-                                class="mdi mdi-power"></i></a>
+                        <a href="{{ route('logout') }}" class="link" data-toggle="tooltip" title="" data-original-title="Logout" onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                        
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                            <i class="mdi mdi-power"></i></a>
                     </div>
                 </div>
             </div>

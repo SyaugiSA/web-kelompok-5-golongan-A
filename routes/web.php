@@ -32,6 +32,7 @@ Route::group(
         Route::resource('kartutandapenduduk', 'KartuTandaPendudukController');
         Route::get('kartutandapenduduk/edit/{nik}', 'KartuTandaPendudukController@edit');
         Route::put('kartutandapenduduk/update/{nik}', 'KartuTandaPendudukController@update');
+        Route::resource('aktakelahiran', 'AktaKelahiranController');
     }
 );
 
