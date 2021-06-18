@@ -16,6 +16,6 @@ class KartuTandaPenduduk extends Model
     //menambahkan fillable
     //Variable $fillable berguna untuk mendaftarkan atribut (nama kolom) yang bisa kita isi ketika melakukan insert atau update ke database
     protected $fillable = [
-        'nik', 'no_kk', 'agama', 'perkawinan', 'gol_darah', 'pekerjaan'
+        'no_reg', 'nik', 'Nama_Lengkap', 'foto_diri', 'no_KK', 'surat_keterangan'
     ];
 }
