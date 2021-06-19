@@ -9,9 +9,9 @@ class AktaKelahiran extends Model
 {
     use HasFactory;
 
-    protected $table = 'akta_kelahiran';
+    protected $table = 'akta_kelahirans';
 
-    protected $primaryKey = 'nik';
+    protected $primaryKey = 'No_Reg';
 
     protected $fillable = [
         'NIK',

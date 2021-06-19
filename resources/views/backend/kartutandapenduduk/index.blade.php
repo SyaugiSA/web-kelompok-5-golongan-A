@@ -39,15 +39,27 @@
                                     <table class="table user-table">
                                         <thead>
                                             <tr>
+                                                <th class="border-top-0">No_Reg</th>
                                                 <th class="border-top-0">NIK</th>
-                                                <th class="border-top-0">NO. KK</th>
-                                                <th class="border-top-0">Agama</th>
-                                                <th class="border-top-0">Perkawinan</th>
-                                                <th class="border-top-0">Gol. Darah</th>
-                                                <th class="border-top-0">Pekerjaan</th>
-                                                <th class="border-top-0">Edit</th>
+                                                <th class="border-top-0">Nama Lengkap</th>
+                                                <th class="border-top-0">Tanggal</th>
+                                                {{-- <th class="border-top-0">Status</th> --}}
+                                                <th class="border-top-0">Detail</th>
                                             </tr>
                                         </thead>
+                                        <tbody>
+                                            {{-- variable $aktakelahiran berasal dari controller AktaKelahiranController di method index --}}
+                                            @foreach ($kartutandapenduduk as $item)
+                                                <tr>
+                                                    <td>{{$item->No_Reg}}</td>
+                                                    <td>{{$item->NIK}}</td>
+                                                    <td>{{$item->Nama_Lengkap}}</td>
+                                                    <td>{{$item->tanggal_waktu_lahir}}</td>
+                                                    {{-- link ini akan mengarah ke route '/aktakelahiran/edit/{{no_reg}}' sambil membawa
+                                                        no_reg pegawai yang ingin dilihat detailnya--}}
+                                                    <td><a href="/kartutandapenduduk/detail/{{$item->No_Reg}}" class="btn btn-warning" >Detail</a>
+                                                </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>

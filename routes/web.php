@@ -28,11 +28,20 @@ Route::group(
 Route::group(
     ['namespace' => 'Backend'],
     function () {
+        //route ini mengarahkan ke controller DashboardController dan mengembalikan ke "view.dashboard"
         Route::resource('dashboard', 'DashboardController');
-        Route::resource('kartutandapenduduk', 'KartuTandaPendudukController');
-        Route::get('kartutandapenduduk/edit/{nik}', 'KartuTandaPendudukController@edit');
-        Route::put('kartutandapenduduk/update/{nik}', 'KartuTandaPendudukController@update');
+
+        // route ini mengarahkan ke controller AktaKelahiranController dan mengembalikan ke "view.kartutandapenduduk.index"
         Route::resource('aktakelahiran', 'AktaKelahiranController');
+
+        // route ini mengarah ke method detail di AktaKelahiranController
+        Route::get('/aktakelahiran/detail/{No_Reg}', 'AktaKelahiranController@detail');
+
+        //route ini mengarahkan ke controller KartuTandaPendudukController dan mengembalikan ke "view.kartutandapenduduk.index"
+        Route::resource('kartutandapenduduk', 'KartuTandaPendudukController');
+
+        // route ini mengarah ke method detail di KartuTandaPenduduk
+        Route::get('/kartutandapenduduk/detail/{No_Reg}', 'KartuTandaPendudukController@detail');
     }
 );
 

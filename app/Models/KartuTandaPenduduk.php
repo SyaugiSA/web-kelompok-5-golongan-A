@@ -8,14 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class KartuTandaPenduduk extends Model
 {
     //menambahkan protected $table 
-    protected $table = 'kartutandapenduduk';
+    protected $table = 'kartu_tanda_penduduks';
 
     //mendefinisikan primary key adalah nik
-    protected $primaryKey = 'nik';
+    protected $primaryKey = 'No_Reg';
 
     //menambahkan fillable
     //Variable $fillable berguna untuk mendaftarkan atribut (nama kolom) yang bisa kita isi ketika melakukan insert atau update ke database
     protected $fillable = [
-        'no_reg', 'nik', 'Nama_Lengkap', 'foto_diri', 'no_KK', 'surat_keterangan'
+        'No_Reg', 'NIK', 'Nama_Lengkap', 'foto_diri', 'no_KK', 'surat_keterangan'
     ];
 }
