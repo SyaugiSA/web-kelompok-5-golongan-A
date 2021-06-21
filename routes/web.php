@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +43,22 @@ Route::group(
 
         // route ini mengarah ke method detail di KartuTandaPenduduk
         Route::get('/kartutandapenduduk/detail/{No_Reg}', 'KartuTandaPendudukController@detail');
+    }
+);
+
+Route::group(
+    ['namespace'=>'superadmin'],
+    function(){
+        Route::resource('super', 'AdminController');
+});
+
+Route::resource('super', 'superadmin\SuperController');
+
+Route::middleware(['auth', 'user'])->group(
+    function(){
+        Route::get('/dashboard', [\App\Http\Controllers\Backend\DashboardController::class, 'index']);
+        Route::get('/home', [App\Http\Controllers\Frontend\HomeController::class, 'index']);
+        Route::get('/super', [App\Http\Controllers\superadmin\SuperController::class,'index']);
     }
 );
 

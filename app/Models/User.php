@@ -20,6 +20,7 @@ class User extends Authenticatable
         'NIK',
         'email',
         'password',
+        'hak_akses'
     ];
 
     /**

@@ -52,9 +52,13 @@
                     </div>
                     <div class="col-4 link-wrap">
                         <!-- item-->
-                        <a href="" class="link" data-toggle="tooltip" title="" data-original-title="Logout"><i
-                                class="mdi mdi-power"></i></a>
-                    </div>
+                        <a href="{{ route('logout') }}" class="link" data-toggle="tooltip" title="" data-original-title="Logout" onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                        
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                            <i class="mdi mdi-power"></i></a>
                 </div>
             </div>
         </aside>

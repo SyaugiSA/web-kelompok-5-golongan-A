@@ -12,7 +12,7 @@ class AdminController extends Controller
 {
     public function index()
     {
-        $admin = DB::table('admin')->get();
+        $admin = DB::table('users')->where('hak_akses',2)->get();
         return view('superadmin.admin.index',compact('admin'));
     }
     public function create()
@@ -22,10 +22,10 @@ class AdminController extends Controller
     }
     public function store(Request $request)
     {
-        DB::table('admin')->insert([
-            'id' => $request->id,
-            'nama' => $request->nama,
-            'password' => $request->password
+        DB::table('users')->insert([
+            'email'=> $request->id,
+            'password' => $request->password,
+            'hak_akses'=>2
         ]);
 
         return redirect()->route('admin.index')
@@ -33,15 +33,15 @@ class AdminController extends Controller
     }
     public function edit($id)
     {
-        $admin = DB::table('admin')->where('id',$id)->first();
-        return view('superadmin.admin.create', compact('admin'));
+        $admin = DB::table('users')->where('NIK',$id)->first();
+        return view('superadmin.admin.create', compact('user'));
     }
     public function update(Request $request)
     {
-        DB::table('admin')->where('id',$request->id)->update([
-            'id' => $request->id,
-            'nama' => $request->nama,
-            'password' => $request->password
+        DB::table('users')->where('NIK',$request->id)->update([
+            'email'=> $request->id,
+            'password' => $request->password,
+            'hak_akses'=>2
         ]);
 
         return redirect()->route('admin.index')
@@ -49,7 +49,7 @@ class AdminController extends Controller
     }
     public function destroy($id)
     {
-        DB::table('admin')->where('id',$id)->delete();
+        DB::table('user')->where('NIK',$id)->delete();
         return redirect()->route('admin.index')
                         ->with('success','Data Admin Berhasil Dihapus');
     }

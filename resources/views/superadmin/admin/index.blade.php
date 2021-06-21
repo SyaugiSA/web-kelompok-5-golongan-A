@@ -46,15 +46,13 @@
                         <tbody>
                             <tr>
                                 <th><i class="border-top-0"></i> Id</th>
-                                <th><i class="border-top-0"></i> Nama</th>
                                 <th><i class="border-top-0"></i> Password</th>
                                 <th><i class="icon-cogs"></i>Action</th>
                             </tr>
                             @foreach ($admin as $item)
                             <tr>
-                                <td>{{$item->id}}</td>
-                                <td>{{$item->nama}}</td>
-                                <td>{{$item->password}}</td>
+                                <td>{{$item->email}}</td>
+                                    <td>{{$item->password}}</td>
                                 <td>
                                     <div class="btn-group">
                                     <form action="{{ route('admin.destroy',$item->id) }}" method="POST">
