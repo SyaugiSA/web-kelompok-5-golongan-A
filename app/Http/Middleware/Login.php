@@ -18,10 +18,10 @@ class Login
     public function handle(Request $request, Closure $next)
     {
         $user = Auth::user()->hak_akses;
-        if($user == 3){
+        if($user == 2){
             return $next($request);
-        }else if($user == 2){
-            return redirect('/admin');
+        }else if($user == 3){
+            return redirect('/home');
         }else if ($user == 1){
             return redirect('/super');
         }
