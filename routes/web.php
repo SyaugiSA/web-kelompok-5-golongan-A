@@ -23,6 +23,8 @@ Route::group(
     ['namespace' => 'Frontend'],
     function () {
         Route::resource('home', 'HomeController');
+        Route::resource('aktakelahiran', 'AktaLahirController');
+        Route::get('/aktakelahiran/detail/{No_Reg}', 'AktaLahirController@detail');
     }
 );
 

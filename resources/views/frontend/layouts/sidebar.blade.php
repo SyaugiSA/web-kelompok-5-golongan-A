@@ -8,33 +8,14 @@
                     <ul id="sidebarnav">
                         <!-- User Profile-->
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="index.html" aria-expanded="false"><i class="mdi me-2 mdi-gauge"></i><span
+                                href="{{url('home')}}" aria-expanded="false"><i class="mdi me-2 mdi-gauge"></i><span
                                     class="hide-menu">Dashboard</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="pages-profile.html" aria-expanded="false">
-                                <i class="mdi me-2 mdi-account-check"></i><span class="hide-menu">Profile</span></a>
-                        </li>
+                                href="{{url('ktp')}}" aria-expanded="false"><i class="mdi me-2 mdi-gauge"></i><span
+                                    class="hide-menu">Kartu Tanda Penduduk</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="table-basic.html" aria-expanded="false"><i class="mdi me-2 mdi-table"></i><span
-                                    class="hide-menu">Table</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="icon-material.html" aria-expanded="false"><i
-                                    class="mdi me-2 mdi-emoticon"></i><span class="hide-menu">Icon</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="map-google.html" aria-expanded="false"><i class="mdi me-2 mdi-earth"></i><span
-                                    class="hide-menu">Google Map</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="pages-blank.html" aria-expanded="false"><i
-                                    class="mdi me-2 mdi-book-open-variant"></i><span class="hide-menu">Blank</span></a>
-                        </li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="pages-error-404.html" aria-expanded="false"><i class="mdi me-2 mdi-help-circle"></i><span
-                                    class="hide-menu">Error 404</span></a>
-                        </li>
-                        <li class="text-center p-20 upgrade-btn">
-                            <a href="https://www.wrappixel.com/templates/materialpro/"
-                                class="btn btn-warning text-white mt-4" target="_blank">Upgrade to
-                                Pro</a>
+                                href="{{url('aktakelahiran')}}" aria-expanded="false"><i class="mdi me-2 mdi-gauge"></i><span
+                                    class="hide-menu">Akta Kelahiran</span></a></li>
                         </li>
                     </ul>
 
