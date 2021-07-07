@@ -33,7 +33,7 @@ Route::group(
         Route::get('ktp_user/create/{user}', 'KartuTandaPendudukUserController@create');
 
         //
-        Route::post('ktp_user/store', 'KartuTandaPendudukUserController@create');
+        Route::post('ktp_user/store', 'KartuTandaPendudukUserController@store');
     }
 );
 
@@ -56,6 +56,9 @@ Route::group(
 
         // route ini mengarah ke method detail di KartuTandaPenduduk
         Route::get('/kartutandapenduduk/detail/{No_Reg}', 'KartuTandaPendudukController@detail');
+
+
+        Route::put('/kartutandapenduduk/update/{No_Reg}', 'KartuTandaPendudukController@update');
     }
 );
 Route::group(

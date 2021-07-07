@@ -43,7 +43,7 @@
                                                 <th class="border-top-0">NIK</th>
                                                 <th class="border-top-0">Nama Lengkap</th>
                                                 <th class="border-top-0">Tanggal</th>
-                                                {{-- <th class="border-top-0">Status</th> --}}
+                                                <th class="border-top-0">Status</th>
                                                 <th class="border-top-0">Detail</th>
                                             </tr>
                                         </thead>
@@ -54,7 +54,8 @@
                                                     <td>{{$item->No_Reg}}</td>
                                                     <td>{{$item->NIK}}</td>
                                                     <td>{{$item->Nama_Lengkap}}</td>
-                                                    <td>{{$item->tanggal_waktu_lahir}}</td>
+                                                    <td>{{$item->tanggal}}</td>
+                                                    <td><button disabled class="btn btn-warning">{{$item->status}}</button></td>
                                                     {{-- link ini akan mengarah ke route '/aktakelahiran/edit/{{no_reg}}' sambil membawa
                                                         no_reg pegawai yang ingin dilihat detailnya--}}
                                                     <td><a href="/kartutandapenduduk/detail/{{$item->No_Reg}}" class="btn btn-warning" >Detail</a>

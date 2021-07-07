@@ -28,4 +28,17 @@ class KartuTandaPendudukController extends Controller
         // passing ke view backend.altakelahiran.detail
         return view('backend.kartutandapenduduk.detail', ['kartutandapenduduk' => $kartutandapenduduk]);
     }
+    public function update($No_Reg, Request $request)
+    {
+        $this->validate($request, [
+            'status' => 'required'
+        ]);
+
+        $kartutandapenduduk = KartuTandaPenduduk::find($No_Reg);
+        // dd($kartutandapenduduk);
+        $kartutandapenduduk->status = $request->status;
+        $kartutandapenduduk->save();
+
+        return redirect('kartutandapenduduk');
+    }
 }
