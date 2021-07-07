@@ -28,8 +28,10 @@ Route::group(
     }
 );
 
+// Route::middleware(['auth', 'user'])->group(function () {
+
 Route::group(
-    ['namespace' => 'Backend'],
+    ['namespace' => 'Backend', 'middleware' => 'user'],
     function () {
         //route ini mengarahkan ke controller DashboardController dan mengembalikan ke "view.dashboard"
         Route::resource('dashboard', 'DashboardController');
@@ -47,21 +49,27 @@ Route::group(
         Route::get('/kartutandapenduduk/detail/{No_Reg}', 'KartuTandaPendudukController@detail');
     }
 );
-
 Route::group(
-    ['namespace'=>'superadmin'],
-    function(){
+    ['namespace' => 'superadmin', 'middleware' => 'user'],
+    function () {
         Route::resource('super', 'AdminController');
-});
-
-Route::resource('super', 'superadmin\SuperController');
-
-Route::middleware(['auth', 'user'])->group(
-    function(){
-        Route::get('/dashboard', [\App\Http\Controllers\Backend\DashboardController::class, 'index']);
-        Route::get('/home', [App\Http\Controllers\Frontend\HomeController::class, 'index']);
-        Route::get('/super', [App\Http\Controllers\superadmin\SuperController::class,'index']);
     }
 );
+// });
+
+// Route::middleware(['auth', 'user'])->group(function () {
+// });
+
+
+
+// Route::resource('super', 'superadmin\SuperController');
+
+// Route::middleware(['auth', 'user'])->group(
+//     function () {
+//         Route::get('/dashboard', [\App\Http\Controllers\Backend\DashboardController::class, 'index']);
+//         Route::get('/home', [App\Http\Controllers\Frontend\HomeController::class, 'index']);
+//         Route::get('/super', [App\Http\Controllers\superadmin\SuperController::class, 'index']);
+//     }
+// );
 
 Auth::routes();

@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 class Login
 {
@@ -17,12 +18,14 @@ class Login
      */
     public function handle(Request $request, Closure $next)
     {
-        $user = Auth::user()->hak_akses;
-        if($user == 2){
+        // $user = Auth::user()->hak_akses;
+        // dd($user);
+        if (auth()->check() && $request->user()->hak_akses == 2) {
             return $next($request);
-        }else if($user == 3){
+            // return redirect('/dashboard');
+        } else if (auth()->check() && $request->user()->hak_akses == 3) {
             return redirect('/home');
-        }else if ($user == 1){
+        } else if (auth()->check() && $request->user()->hak_akses == 1) {
             return redirect('/super');
         }
     }
