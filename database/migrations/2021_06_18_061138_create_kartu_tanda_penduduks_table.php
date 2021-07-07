@@ -18,7 +18,8 @@ class CreateKartuTandaPenduduksTable extends Migration
             $table->bigInteger('NIK')->unique();
             $table->string('Nama_Lengkap', 100);
             $table->string('foto_diri');
-            $table->dateTime('tanggal_waktu_lahir');
+            $table->date('tanggal');
+            $table->string('status', 10);
             $table->bigInteger('no_KK');
             $table->string('surat_keterangan');
             $table->timestamps();

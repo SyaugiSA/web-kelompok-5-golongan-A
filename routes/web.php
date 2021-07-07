@@ -25,10 +25,19 @@ Route::group(
         Route::resource('home', 'HomeController');
         Route::resource('aktakelahiran', 'AktaLahirController');
         Route::get('/aktakelahiran/detail/{No_Reg}', 'AktaLahirController@detail');
+
+        //route ini mengarahkan ke controller DashboardController dan mengembalikan ke "view"
+        Route::resource('ktp_user', 'KartuTandaPendudukUserController');
+
+        //route ini mengarah ke controller kartutandapendudukusercontroller serta membawa nik user
+        Route::get('ktp_user/create/{user}', 'KartuTandaPendudukUserController@create');
+
+        //
+        Route::post('ktp_user/store', 'KartuTandaPendudukUserController@create');
     }
 );
 
-// Route::middleware(['auth', 'user'])->group(function () {
+
 
 Route::group(
     ['namespace' => 'Backend', 'middleware' => 'user'],
