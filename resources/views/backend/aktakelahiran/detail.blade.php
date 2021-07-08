@@ -78,9 +78,17 @@
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label for="example-email" class="col-md-12">Tanggal Waktu Lahir</label>
+                                                    <label for="example-email" class="col-md-12">Tanggal Lahir</label>
                                                     <div class="col-md-12">
-                                                        <input type="email" disabled placeholder="{{$aktakelahiran->tanggal_waktu_lahir}}"
+                                                        <input type="email" disabled placeholder="{{$aktakelahiran->tanggal_lahir}}"
+                                                            class="form-control ps-0 form-control-line" 
+                                                            id="example-email">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="example-email" class="col-md-12">Waktu Lahir</label>
+                                                    <div class="col-md-12">
+                                                        <input type="email" disabled placeholder="{{$aktakelahiran->waktu_lahir}}"
                                                             class="form-control ps-0 form-control-line" 
                                                             id="example-email">
                                                     </div>
@@ -159,6 +167,30 @@
                                                 </div>
                                                
                                             </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-fluid">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title ml-3">Proses Yang Sedang dilakukan</h5>
+                                            <form method="post" action="/aktakelahiran/update/{{$aktakelahiran->No_Reg}}">
+                                                {{ csrf_field() }}
+                                                {{method_field('PUT')}}
+                                                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                                    <input type="radio" class="btn-check" name="status" id="btnradio1" value="Diproses" autocomplete="off" checked>
+                                                    <label class="btn btn-outline-primary" for="btnradio1">Diproses</label>
+                                                  
+                                                    <input type="radio" class="btn-check" name="status" id="btnradio2" value="Ditolak" autocomplete="off">
+                                                    <label class="btn btn-outline-primary" for="btnradio2">Ditolak</label>
+                                                  
+                                                    <input type="radio" class="btn-check" name="status" id="btnradio3" value="Selesai" autocomplete="off">
+                                                    <label class="btn btn-outline-primary" for="btnradio3">Selesai</label>
+                                                  </div>
+                                                  <br>
+
+                                                 <input type="submit" class="btn btn-success" value="Simpan" >
+                                            </form> 
                                         </div>
                                     </div>
                                 </div>

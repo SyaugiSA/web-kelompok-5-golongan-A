@@ -57,8 +57,11 @@ Route::group(
         // route ini mengarah ke method detail di KartuTandaPenduduk
         Route::get('/kartutandapenduduk/detail/{No_Reg}', 'KartuTandaPendudukController@detail');
 
-
+        // route ini mengarah ke method update di KartuTandaPenduduk
         Route::put('/kartutandapenduduk/update/{No_Reg}', 'KartuTandaPendudukController@update');
+
+        //route ini mengarah ke method update di controller aktakelahiran controller serta membawa nomor registrasi
+        Route::put('/aktakelahiran/update/{No_Reg}', 'AktaKelahiranController@update');
     }
 );
 Route::group(
