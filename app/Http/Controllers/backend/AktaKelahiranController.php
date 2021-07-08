@@ -25,4 +25,17 @@ class AktaKelahiranController extends Controller
         // passing ke view backend.altakelahiran.detail
         return view('backend.aktakelahiran.detail', ['aktakelahiran' => $aktakelahiran]);
     }
+
+    public function update($No_Reg, Request $request)
+    {
+        $this->validate($request, [
+            'status' => 'required'
+        ]);
+        $aktakelahiran = AktaKelahiran::find($No_Reg);
+        // dd($aktakelahiran);
+        $aktakelahiran->status = $request->status;
+        $aktakelahiran->save();
+
+        return redirect('aktakelahiran');
+    }
 }

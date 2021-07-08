@@ -42,7 +42,7 @@
                                                 <th class="border-top-0">No. reg</th>
                                                 <th class="border-top-0">NIK</th>
                                                 <th class="border-top-0">Nama</th>
-                                                <th class="border-top-0">Tanggal</th>
+                                                <th class="border-top-0">Status</th>
                                                 <th class="border-top-0">Detail</th>
                                             </tr>
                                         </thead>
@@ -53,7 +53,7 @@
                                                     <td>{{$item->No_Reg}}</td>
                                                     <td>{{$item->NIK}}</td>
                                                     <td>{{$item->nama_lengkap}}</td>
-                                                    <td>{{$item->tanggal_waktu_lahir}}</td>
+                                                    <td><button disabled class="btn btn-warning">{{$item->status}}</button></td>
                                                     {{-- link ini akan mengarah ke route '/aktakelahiran/edit/{{no_reg}}' sambil membawa
                                                         no_reg pegawai yang ingin dilihat detailnya--}}
                                                     <td><a href="/aktakelahiran/detail/{{$item->No_Reg}}" class="btn btn-warning" >Detail</a>

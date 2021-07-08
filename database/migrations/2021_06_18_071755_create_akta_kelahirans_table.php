@@ -17,18 +17,21 @@ class CreateAktaKelahiransTable extends Migration
             $table->bigIncrements('No_Reg');
             $table->bigInteger('NIK')->unique();
             $table->string('nama_lengkap', 100);
-            $table->boolean('jenis_kelamin');
+            $table->string('jenis_kelamin', 1);
             $table->string('tempat_lahir', 30);
-            $table->dateTime('tanggal_waktu_lahir');
+            $table->date('tanggal_lahir');
+            $table->time('waktu_lahir');
             $table->string('tempat_dilahirkan', 27);
             $table->string('jenis_kelahiran', 8);
-            $table->tinyInteger('kelahiran_ke');
+            $table->string('kelahiran_ke', 2);
             $table->string('penolong_kelahiran', 14);
             $table->tinyInteger('berat');
             $table->tinyInteger('tinggi');
             $table->bigInteger('no_KK');
             $table->string('nama_kepala_keluarga', 100);
             $table->bigInteger('noHP');
+            $table->string('file_administrasi');
+            $table->string('status', 10);
             $table->timestamps();
         });
     }
