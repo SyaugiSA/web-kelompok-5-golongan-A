@@ -23,8 +23,12 @@ Route::group(
     ['namespace' => 'Frontend'],
     function () {
         Route::resource('home', 'HomeController');
-        Route::resource('aktakelahiran', 'AktaLahirController');
+        Route::resource('aktakelahiran_user', 'AktaLahirController');
         Route::get('/aktakelahiran/detail/{No_Reg}', 'AktaLahirController@detail');
+
+        Route::get('/aktakelahiran_user/create', 'AktaLahirController@create');
+
+        Route::post('/aktakelahiran_user/store', 'AktaLahirController@store');
 
         //route ini mengarahkan ke controller DashboardController dan mengembalikan ke "view"
         Route::resource('ktp_user', 'KartuTandaPendudukUserController');

@@ -38,10 +38,15 @@ class KartuTandaPendudukUserController extends Controller
 
     public function store(Request $request)
     {
+        $message = [
+            'required' => 'form ini wajib di isi!'
+        ];
+
         $this->validate($request, [
             'foto_diri' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
-            'surat_keterangan' => 'required|file|image|mimes:jpeg,png,jpg|max:2048'
-        ]);
+            'surat_keterangan' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
+            'tanggal' => 'required'
+        ], $message);
 
         $foto_diri = $request->file('foto_diri');
         $surat_keterangan = $request->file('surat_keterangan');

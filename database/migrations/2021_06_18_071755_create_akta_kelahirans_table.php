@@ -20,7 +20,7 @@ class CreateAktaKelahiransTable extends Migration
             $table->string('jenis_kelamin', 1);
             $table->string('tempat_lahir', 30);
             $table->date('tanggal_lahir');
-            $table->time('waktu_lahir');
+            $table->string('waktu_lahir', 6);
             $table->string('tempat_dilahirkan', 27);
             $table->string('jenis_kelahiran', 8);
             $table->string('kelahiran_ke', 2);

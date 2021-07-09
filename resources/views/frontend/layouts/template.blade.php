@@ -24,6 +24,8 @@
     <link href="{{asset('frontend/assets/plugins/c3-master/c3.min.css')}}" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="{{asset('frontend/css/style.min.css')}}" rel="stylesheet">
+    {{-- datepicker jquery --}}
+    @stack('content-css')
 </head>
 
 <body>
@@ -147,6 +149,8 @@
     <!--Custom JavaScript -->
     <script src="{{asset('frontend/js/pages/dashboards/dashboard1.js')}}"></script>
     <script src="{{asset('frontend/js/custom.js')}}"></script>
+    {{-- js datepicker --}}
+    @stack('content-js')
 </body>
 
 </html>

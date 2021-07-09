@@ -28,13 +28,15 @@
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
+                
                 <div class="row">
                     <!-- column -->
                     <div class="col-sm-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Data Pendaftar</h4>
-                                <h6 class="card-subtitle">Data Pendaftar Akta Kelahiran</h6>
+                                <a href="{{url('/aktakelahiran_user/create')}}" class="btn btn-primary">Pengajuan Baru</a>
+                                {{-- <h4 class="card-title">Data Pendaftar</h4>
+                                <h6 class="card-subtitle">Data Pendaftar Akta Kelahiran</h6> --}}
                                 <div class="table-responsive">
                                     <table class="table user-table">
                                         <thead>
@@ -43,20 +45,20 @@
                                                 <th class="border-top-0">NIK</th>
                                                 <th class="border-top-0">Nama</th>
                                                 <th class="border-top-0">Tanggal</th>
-                                                <th class="border-top-0">Detail</th>
+                                                <th class="border-top-0">status</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             {{-- variable $aktakelahiran berasal dari controller AktaKelahiranController di method index --}}
-                                            @foreach ($aktakelahiran as $item)
+                                            @foreach ($data as $item)
                                                 <tr>
                                                     <td>{{$item->No_Reg}}</td>
                                                     <td>{{$item->NIK}}</td>
                                                     <td>{{$item->nama_lengkap}}</td>
-                                                    <td>{{$item->tanggal_waktu_lahir}}</td>
+                                                    <td>{{$item->tanggal_lahir}}</td>
                                                     {{-- link ini akan mengarah ke route '/aktakelahiran/edit/{{no_reg}}' sambil membawa
                                                         no_reg pegawai yang ingin dilihat detailnya--}}
-                                                    <td><a href="/aktakelahiran/detail/{{$item->No_Reg}}" class="btn btn-warning" >Detail</a>
+                                                        <td><button disabled class="btn btn-warning">{{$item->status}}</button></td>
                                                 </tr>
                                             @endforeach
                                         </tbody>

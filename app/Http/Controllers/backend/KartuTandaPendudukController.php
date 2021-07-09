@@ -30,6 +30,8 @@ class KartuTandaPendudukController extends Controller
     }
     public function update($No_Reg, Request $request)
     {
+
+
         $this->validate($request, [
             'status' => 'required'
         ]);

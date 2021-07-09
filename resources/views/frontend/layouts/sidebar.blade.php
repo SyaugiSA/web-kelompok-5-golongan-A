@@ -14,7 +14,7 @@
                                 href="{{url('ktp_user')}}" aria-expanded="false"><i class="mdi me-2 mdi-gauge"></i><span
                                     class="hide-menu">Kartu Tanda Penduduk</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="{{url('aktakelahiran')}}" aria-expanded="false"><i class="mdi me-2 mdi-gauge"></i><span
+                                href="{{url('aktakelahiran_user')}}" aria-expanded="false"><i class="mdi me-2 mdi-gauge"></i><span
                                     class="hide-menu">Akta Kelahiran</span></a></li>
                         </li>
                     </ul>
