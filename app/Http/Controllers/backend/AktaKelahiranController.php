@@ -12,7 +12,8 @@ class AktaKelahiranController extends Controller
     public function index()
     {
         // mengambil semua data akta kelahiran dengan fungsi all dari database sama dengan query select*from akta_kelahiran
-        $aktakelahiran = AktaKelahiran::all();
+        $aktakelahiran = AktaKelahiran::orderBy('created_at', 'DESC')
+            ->paginate(20);
 
         // passing ke view backend.altakelahiran.index
         return view('backend.aktakelahiran.index', ['aktakelahiran' => $aktakelahiran]);

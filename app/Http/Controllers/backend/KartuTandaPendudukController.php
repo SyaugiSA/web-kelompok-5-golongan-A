@@ -13,7 +13,8 @@ class KartuTandaPendudukController extends Controller
     {
         // mengambil semua data yang ada pada table kartutandapenduduk
         // seperti syntax select * from kartutandapenduduk
-        $kartutandapenduduk = KartuTandaPenduduk::all();
+        $kartutandapenduduk = KartuTandaPenduduk::orderBy('created_at', 'DESC')
+            ->paginate(20);
 
 
         //mengembalikan variable $ktp_list untuk ditampilan di view/backend.kartutandapenduduk.index
