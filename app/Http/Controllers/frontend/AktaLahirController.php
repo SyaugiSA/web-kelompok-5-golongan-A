@@ -59,7 +59,7 @@ class AktaLahirController extends Controller
 
         $tujuan_upload = 'data_administrasi';
 
-        $file_administrasi->move($tujuan_upload, $nama_file_administrasi);
+        $path = $file_administrasi->store('public/files/file_administrasi');
 
         AktaLahir::create([
             'NIK' => $request->NIK,
@@ -78,7 +78,7 @@ class AktaLahirController extends Controller
             'nama_kepala_keluarga' => $request->nama_kepala_keluarga,
             'noHP' => $request->noHP,
             'status' => 'menunggu',
-            'file_administrasi' => $request->file_administrasi
+            'file_administrasi' => $path
         ]);
         return redirect('aktakelahiran_user');
     }
