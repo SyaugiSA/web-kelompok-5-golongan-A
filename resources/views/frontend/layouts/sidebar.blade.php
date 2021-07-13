@@ -8,13 +8,13 @@
                     <ul id="sidebarnav">
                         <!-- User Profile-->
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="{{url('home')}}" aria-expanded="false"><i class="mdi me-2 mdi-gauge"></i><span
+                                href="{{url('home')}}" aria-expanded="false"><i class="mdi mdi-home"></i><span
                                     class="hide-menu">Dashboard</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="{{url('ktp_user')}}" aria-expanded="false"><i class="mdi me-2 mdi-gauge"></i><span
-                                    class="hide-menu">Kartu Tanda Penduduk</span></a></li>
+                                href="{{url('ktp_user')}}" aria-expanded="false"><i class="mdi mdi-account-card-details"></i><span
+                                    class="hide-menu">KTP</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="{{url('aktakelahiran_user')}}" aria-expanded="false"><i class="mdi me-2 mdi-gauge"></i><span
+                                href="{{url('aktakelahiran_user')}}" aria-expanded="false"><i class="mdi mdi-account"></i><span
                                     class="hide-menu">Akta Kelahiran</span></a></li>
                         </li>
                     </ul>
@@ -47,7 +47,7 @@
                     </div>
                 </div>
             </div>
-            </aside>
+        </aside>
         <!-- ============================================================== -->
         <!-- End Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->

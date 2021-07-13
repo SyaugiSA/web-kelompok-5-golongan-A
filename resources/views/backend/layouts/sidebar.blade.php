@@ -8,15 +8,15 @@
                     <ul id="sidebarnav">
                         <!-- User Profile-->
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="{{url('dashboard')}}" aria-expanded="false"><i class="mdi me-2 mdi-gauge"></i><span
+                                href="{{url('dashboard')}}" aria-expanded="false"><i class="mdi mdi-home"></i><span
                                     class="hide-menu">Dashboard</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                             href="{{url ('kartutandapenduduk')}}" aria-expanded="false">
-                            <i class="mdi me-2 mdi-account-check"></i><span class="hide-menu">KTP</span></a>
+                            <i class="mdi mdi-account-card-details"></i><span class="hide-menu">KTP</span></a>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                             href="{{url ('aktakelahiran')}}" aria-expanded="false">
-                            <i class="mdi me-2 mdi-account-check"></i><span class="hide-menu">Akta Kelahiran</span></a>
+                            <i class="mdi mdi-account"></i><span class="hide-menu">Akta Kelahiran</span></a>
                         </li>
                     </ul>
 

@@ -35,67 +35,9 @@
                             <div class="tab-content">
                                 <div class="tab-pane active" id="home" role="tabpanel">
                                     <div class="card-body">
-                                    <h4 class="font-medium mt-4">Status Pengajuan</h4>
-                                    <hr>
-                                        <div class="profiletimeline border-start-0">
-                                            <div class="sl-item">
-                                                <div class="sl-right">
-                                                    <div><a href="#" class="link">John Doe</a> <span class="sl-date">5
-                                                            minutes ago</span>
-                                                        <p>assign a new task </p>
-                                                        <div class="row">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <hr>
-                                            <div class="sl-item">
-                                                <div class="sl-left"> </div>
-                                                <div class="sl-right">
-                                                    <div> <a href="#" class="link">John Doe</a> <span class="sl-date">5
-                                                            minutes ago</span>
-                                                        <div class="mt-3 row">
-                                                            <div class="col-md-9 col-xs-12">
-                                                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                                    elit. Integer nec odio. Praesent libero. Sed cursus
-                                                                    ante dapibus diam. </p> 
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <hr>
-                                            <div class="sl-item">
-                                                <div class="sl-left"> </div>
-                                                <div class="sl-right">
-                                                    <div><a href="#" class="link">John Doe</a> <span class="sl-date">5
-                                                            minutes ago</span>
-                                                        <p class="mt-2"> Lorem ipsum dolor sit amet, consectetur
-                                                            adipiscing elit. Integer nec odio. Praesent libero. Sed
-                                                            cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh
-                                                            elementum imperdiet. Duis sagittis ipsum. Praesent mauris.
-                                                            Fusce nec tellus sed augue semper </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <hr>
-                                            <div class="sl-item">
-                                                <div class="sl-left"></div>
-                                                <div class="sl-right">
-                                                    <div><a href="#" class="link">John Doe</a> <span class="sl-date">5
-                                                            minutes ago</span>
-                                                        <blockquote class="mt-2">
-                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                                            sed do eiusmod tempor incididunt
-                                                        </blockquote>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <h4 class="font-medium mt-4">Berkas-berkas</h4>
                                     <hr>
                                     <div class="sl-right">
-                                        <h4 class="font-medium mt-4">Berkas-berkas</h4>
                                             <div class="mt-3 row">
                                             <div class="row">
                                                 <div class="col-sm-6">
@@ -128,6 +70,11 @@
                                                     </div>
                                                     </div>
                                                 </div>
+                                                <hr>
+                                                <h4 class="font-medium mt-4">Note</h4>
+                                                <blockquote class="mt-2">
+                                                    <h5>Mohon untuk melampirkan berkas-berkas diatas dalam bentuk file rar/zip </h5>
+                                                </blockquote>
                                                 </div>
                                                 </div>
                                             </div>
