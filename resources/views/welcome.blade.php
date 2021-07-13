@@ -8,7 +8,7 @@
   <title>Sistem Informasi Pelayanan Adminduk dan Pencapil | Dinas Kependudukan dan Pencatatan Sipil Kabupaten Jember</title>
 
   <!-- Icon -->
-  <link rel="icon" type="image/png" href="images/logo_jember.png">
+  <link rel="icon" type="image/png" href="{{asset('Auth/login/logo_jember.png')}}">
 
   <!-- bootstrap.min css -->
   <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="{{asset('Auth/login/style_home.css')}}">
 
 </head>
 

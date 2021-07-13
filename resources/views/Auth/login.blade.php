@@ -5,7 +5,7 @@
       crossorigin="anonymous">
     </script>
     <link rel="icon" type="image/png" href="{{asset('Auth/login/logo_jember.png')}}">
-    <link rel="stylesheet" href="{{asset('Auth/login/style.css')}}" />
+    <link rel="stylesheet" href="{{asset('Auth/login/style_login.css')}}" />
     <title>Sistem Informasi Pelayanan Adminduk dan Pencapil | Dinas Kependudukan dan Pencatatan Sipil Kabupaten Jember</title>
   </head>
   <body>
