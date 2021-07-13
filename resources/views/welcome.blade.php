@@ -11,12 +11,12 @@
   <link rel="icon" type="image/png" href="{{asset('Auth/login/logo_jember.png')}}">
 
   <!-- bootstrap.min css -->
-  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{asset('Auth/login/bootstrap.min.css')}}">
   <!-- Icon Font Css -->
-  <link rel="stylesheet" href="plugins/icofont/icofont.min.css">
+  <link rel="stylesheet" href="{{asset('Auth/login/icofont.min.css')}}">
   <!-- Slick Slider  CSS -->
-  <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css">
-  <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
+  <link rel="stylesheet" href="{{asset('Auth/login/slick.css')}}">
+  <link rel="stylesheet" href="{{asset('Auth/login/slick-theme.css')}}">
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="{{asset('Auth/login/style_home.css')}}">
