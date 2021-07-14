@@ -33,15 +33,14 @@ class AdminController extends Controller
     }
     public function edit($id)
     {
-        $user = DB::table('users')->where('NIK',$id)->first();
+        $user = DB::table('users')->where('id',$id)->first();
         return view('superadmin.admin.create', compact('user'));
     }
     public function update(Request $request)
     {
-        DB::table('users')->where('NIK',$request->id)->update([
-            'email'=> $request->id,
+        DB::table('users')->where('id', $request->id)->update([
+            'email'=> $request->email,
             'password' => $request->password,
-            'hak_akses'=>2
         ]);
 
         return redirect()->route('super.index')
@@ -49,7 +48,7 @@ class AdminController extends Controller
     }
     public function destroy($id)
     {
-        DB::table('user')->where('NIK',$id)->delete();
+        DB::table('users')->where('id',$id)->delete();
         return redirect()->route('super.index')
                         ->with('success','Data Admin Berhasil Dihapus');
     }
