@@ -28,7 +28,7 @@ class AdminController extends Controller
             'hak_akses'=>2
         ]);
 
-        return redirect()->route('admin.index')
+        return redirect()->route('super.index')
                         ->with('success','Data Admin baru telah berhasil disimpan.');
     }
     public function edit($id)
@@ -44,13 +44,13 @@ class AdminController extends Controller
             'hak_akses'=>2
         ]);
 
-        return redirect()->route('admin.index')
+        return redirect()->route('super.index')
                         ->with('success','Data Admin Berhasil Diperbaharui');
     }
     public function destroy($id)
     {
         DB::table('user')->where('NIK',$id)->delete();
-        return redirect()->route('admin.index')
+        return redirect()->route('super.index')
                         ->with('success','Data Admin Berhasil Dihapus');
     }
 

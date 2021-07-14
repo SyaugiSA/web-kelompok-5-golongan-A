@@ -15,6 +15,11 @@
           <form method="POST" action="{{ route('login') }}" class="sign-in-form">
             @csrf
             <h2 class="title">Masuk</h2>
+            
+            @if (session('error'))
+                <div class="alert alert-danger">{{session('error')}}</div>
+            @endif
+
             <div class="input-field">
               <i class="fas fa-user"></i>
               <input id="ID" type="text" class="form-control @error('email') is-invalid @enderror" name="ID" value="{{ old('email') }}" required autocomplete="ID" autofocus placeholder="NIK atau Alamat Email" />

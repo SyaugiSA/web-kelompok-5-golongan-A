@@ -45,7 +45,7 @@ class LoginController extends Controller
             'password' => 'required|string|min:8'
         ]);
 
-        $logintype = filter_var($request -> ID, FILTER_VALIDATE_EMAIL)? 'email':'NIK';
+        $logintype = filter_var($request->ID, FILTER_VALIDATE_EMAIL)? 'email':'NIK';
 
         $login=[
             $logintype => $request->ID,
