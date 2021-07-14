@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 Route::group(
-    ['namespace' => 'Frontend'],
+    ['namespace' => 'Frontend', 'middleware' => ['auth']],
     function () {
         Route::resource('home', 'HomeController');
         Route::resource('aktakelahiran_user', 'AktaLahirController');
@@ -69,7 +69,7 @@ Route::group(
     }
 );
 Route::group(
-    ['namespace' => 'superadmin', 'middleware' => 'user'],
+    ['namespace' => 'superadmin', 'middleware' => ['auth']],
     function () {
         Route::resource('super', 'AdminController');
     }
