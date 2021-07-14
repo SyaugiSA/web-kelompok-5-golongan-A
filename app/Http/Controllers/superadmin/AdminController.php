@@ -33,7 +33,7 @@ class AdminController extends Controller
     }
     public function edit($id)
     {
-        $admin = DB::table('users')->where('NIK',$id)->first();
+        $user = DB::table('users')->where('NIK',$id)->first();
         return view('superadmin.admin.create', compact('user'));
     }
     public function update(Request $request)
