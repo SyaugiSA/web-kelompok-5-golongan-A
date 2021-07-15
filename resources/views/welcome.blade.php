@@ -31,8 +31,12 @@
 			<div class="row align-items-center">
 				<div class="col-lg-6">
 					<ul class="top-bar-info list-inline-item pl-0 mb-0">
-						<li class="list-inline-item"><a href="mailto:infodispendukcapiljember@gmail.com"><i class="icofont-support-faq mr-2"></i>infodispendukcapiljember@gmail.com</a></li>
-						<li class="list-inline-item"><a href="https://goo.gl/maps/P9oFdLwhS94PtWs6A"><i class="icofont-location-pin mr-2"></i>Jl. Jawa No. 18 Sumbersari </a></li>
+						<li class="list-inline-item"><a href="mailto:infodispendukcapiljember@gmail.com"><i class="icofont-support-faq mr-2">
+                        </i>infodispendukcapiljember@gmail.com</a></li>
+
+						<li class="list-inline-item"><a href="https://goo.gl/maps/P9oFdLwhS94PtWs6A"><i class="icofont-location-pin mr-2">
+                        </i>Jl. Jawa No. 18 Sumbersari </a></li>
+
 					</ul>
 				</div>
 				<div class="col-lg-6">
@@ -48,11 +52,14 @@
 	</div>
 	<nav class="navbar navbar-expand-lg navigation" id="navbar">
 		<div class="container">
+
 		 	 <a class="navbar-brand" href="welcome.blade.php">
 			  	<img src="{{asset('Auth/login/logo_small.png')}}" alt="" class="img-fluid">
 			  </a>
 
-		  	<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmain" aria-controls="navbarmain" aria-expanded="false" aria-label="Toggle navigation">
+		  	<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmain" aria-controls="navbarmain"
+             aria-expanded="false" aria-label="Toggle navigation">
+
 			<span class="icofont-navigation-menu"></span>
 		  </button>
 	  
@@ -61,11 +68,13 @@
 			  <li class="nav-item active">
 				<a class="nav-link" href="welcome.blade.php">Beranda</a>
 			  </li>
-			   <li class="nav-item"><a class="nav-link" href="about.html">Status Pengajuan</a></li>
-			    <li class="nav-item"><a class="nav-link" href="service.html">Bantuan</a></li>
+			   <li class="nav-item"><a class="nav-link" href="#">Status Pengajuan</a></li>
+			    <li class="nav-item"><a class="nav-link" href="#">Bantuan</a></li>
 
 			   <li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="blog-sidebar.html" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Akun <i class="icofont-thin-down"></i></a>
+					<a class="nav-link dropdown-toggle" href="{{asset('Auth/login/blog-sidebar.html')}}" id="dropdown05" data-toggle="dropdown"
+                     aria-haspopup="true" aria-expanded="false">Akun <i class="icofont-thin-down"></i></a>
+                     
 					<ul class="dropdown-menu" aria-labelledby="dropdown05">
 						<li><a class="dropdown-item" href="{{asset('Auth/login/blog-sidebar.html')}}">Edit Akun</a></li>
 
@@ -78,8 +87,6 @@
 	</nav>
 </header>
 	
-
-
 
 <!-- Slider Start -->
 <section class="banner">
