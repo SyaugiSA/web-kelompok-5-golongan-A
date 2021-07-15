@@ -15,7 +15,8 @@ class CreateAktaKelahiransTable extends Migration
     {
         Schema::create('akta_kelahirans', function (Blueprint $table) {
             $table->bigIncrements('No_Reg');
-            $table->bigInteger('NIK')->unique();
+            $table->bigInteger('NIK')->unique()->nullable();
+            $table->bigInteger('nik_pemohon');
             $table->string('nama_lengkap', 100);
             $table->string('jenis_kelamin', 1);
             $table->string('tempat_lahir', 30);
