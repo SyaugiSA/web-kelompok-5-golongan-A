@@ -59,7 +59,7 @@
 		  <div class="collapse navbar-collapse" id="navbarmain">
 			<ul class="navbar-nav ml-auto">
 			  <li class="nav-item active">
-				<a class="nav-link" href="index.html">Beranda</a>
+				<a class="nav-link" href="welcome.blade.php">Beranda</a>
 			  </li>
 			   <li class="nav-item"><a class="nav-link" href="about.html">Status Pengajuan</a></li>
 			    <li class="nav-item"><a class="nav-link" href="service.html">Bantuan</a></li>
@@ -67,9 +67,9 @@
 			   <li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="blog-sidebar.html" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Akun <i class="icofont-thin-down"></i></a>
 					<ul class="dropdown-menu" aria-labelledby="dropdown05">
-						<li><a class="dropdown-item" href="blog-sidebar.html">Edit Akun</a></li>
+						<li><a class="dropdown-item" href="{{asset('Auth/login/blog-sidebar.html')}}">Edit Akun</a></li>
 
-						<li><a class="dropdown-item" href="blog-single.html">Keluar Akun</a></li>
+						<li><a class="dropdown-item" href="{{asset('Auth/login/blog-single.html')}}">Keluar Akun</a></li>
 					</ul>
 			  	</li>
 			</ul>
@@ -235,7 +235,7 @@
 			<div class="col-lg-4 mr-auto col-sm-6">
 				<div class="widget mb-5 mb-lg-0">
 					<div class="logo mb-4">
-						<img src="images/logo_small.png" alt="" class="img-fluid">
+						<img src="{{asset('Auth/login/logo_small.png')}}" alt="" class="img-fluid">
 					</div>
 					<p>LAYANAN ONLINE DINAS KEPENDUDUKAN DAN PENCATATAN SIPIL KABUPATEN JEMBER </p>
 				</div>
