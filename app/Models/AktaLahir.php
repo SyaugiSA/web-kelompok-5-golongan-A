@@ -15,6 +15,7 @@ class AktaLahir extends Model
 
     protected $fillable = [
         'NIK',
+        'nik_pemohon',
         'nama_lengkap',
         'jenis_kelamin',
         'tempat_lahir',

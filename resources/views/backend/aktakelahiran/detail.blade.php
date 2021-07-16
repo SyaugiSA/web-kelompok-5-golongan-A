@@ -174,6 +174,31 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <h5 class="card-title ml-3">Proses Yang Sedang dilakukan</h5>
+                                            <form method="post" action="/aktakelahiran/update_nik/{{$aktakelahiran->No_Reg}}">
+                                                {{ csrf_field() }}
+                                                {{method_field('PUT')}}
+                                                <div class="form-group">
+                                                    <div class="mb-3">
+                                                        <label class="form-label">NIK BARU</label>
+                                                        <input type="text" class="form-control" id="" name="NIK">
+                                                      </div>
+                                                      @if ($errors->has('NIK'))
+                                                          <span class="text-danger small">
+                                                            <p>{{$errors->first('NIK')}}</p>
+                                                          </span>
+                                                      @endif
+                                                </div>
+                                                  <br>
+
+                                                 <input type="submit" class="btn btn-success" value="Simpan" >
+                                            </form> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container-fluid">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title ml-3">Proses Yang Sedang dilakukan</h5>
                                             <form method="post" action="/aktakelahiran/update/{{$aktakelahiran->No_Reg}}">
                                                 {{ csrf_field() }}
                                                 {{method_field('PUT')}}

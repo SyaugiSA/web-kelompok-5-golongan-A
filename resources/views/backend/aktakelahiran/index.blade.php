@@ -39,8 +39,9 @@
                                     <table class="table user-table">
                                         <thead>
                                             <tr>
-                                                <th class="border-top-0">No. reg</th>
-                                                <th class="border-top-0">NIK</th>
+                                                <th class="border-top-0">No. Reg</th>
+                                                <th class="border-top-0">NIK Pemohon</th>
+                                                <th class="border-top-0">NIK Baru</th>
                                                 <th class="border-top-0">Nama</th>
                                                 <th class="border-top-0">Status</th>
                                                 <th class="border-top-0">Detail</th>
@@ -51,6 +52,7 @@
                                             @foreach ($aktakelahiran as $item)
                                                 <tr>
                                                     <td>{{$item->No_Reg}}</td>
+                                                    <td>{{$item->nik_pemohon}}</td>
                                                     <td>{{$item->NIK}}</td>
                                                     <td>{{$item->nama_lengkap}}</td>
                                                     <td><button disabled class="btn btn-warning">{{$item->status}}</button></td>

@@ -14,7 +14,7 @@ class AktaLahirController extends Controller
     public function index()
     {
         $user = Auth::user()->NIK;
-        $data = DB::table('akta_kelahirans')->where('NIK', '=', $user)->get();
+        $data = DB::table('akta_kelahirans')->where('nik_pemohon', '=', $user)->get();
         // dd($data);
 
         return view('frontend.aktakelahiran_user.index', compact('data', 'user'));
@@ -35,7 +35,7 @@ class AktaLahirController extends Controller
         ];
 
         $this->validate($request, [
-            'NIK' => 'required|numeric|min:16',
+            'nik_pemohon' => 'required|numeric|min:16',
             'nama_lengkap' => 'required|max:100',
             'jenis_kelamin' => 'required',
             'tempat_lahir' => 'required|max:30',
@@ -62,7 +62,7 @@ class AktaLahirController extends Controller
         $path = $file_administrasi->store('public/files/file_administrasi');
 
         AktaLahir::create([
-            'NIK' => $request->NIK,
+            'nik_pemohon' => $request->nik_pemohon,
             'nama_lengkap' => $request->nama_lengkap,
             'jenis_kelamin' => $request->jenis_kelamin,
             'tempat_lahir' => $request->tempat_lahir,

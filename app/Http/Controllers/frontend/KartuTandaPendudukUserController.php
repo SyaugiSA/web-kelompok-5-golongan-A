@@ -38,6 +38,7 @@ class KartuTandaPendudukUserController extends Controller
 
     public function store(Request $request)
     {
+        // dd($request->all());
         $message = [
             'required' => 'form ini wajib di isi!'
         ];

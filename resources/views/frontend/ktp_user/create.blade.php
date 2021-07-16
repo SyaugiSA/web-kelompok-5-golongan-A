@@ -28,11 +28,11 @@
                                     {{ csrf_field() }}
                                     <div class="mb-3">
                                       <label class="form-label">Nomor NIK</label>
-                                      <input type="text" class="form-control" value="{{$aktakelahiran->NIK}}" disabled placeholder="{{$aktakelahiran->NIK}}" id="NIK_Pengajuan" name="NIK">
+                                      <input type="text" class="form-control" value="{{$aktakelahiran->NIK}}" placeholder="{{$aktakelahiran->NIK}}" id="NIK_Pengajuan" name="NIK">
                                     </div>
                                     <div class="mb-3">
                                       <label class="form-label">Nama Lengkap</label>
-                                      <input type="text" class="form-control" value="{{$aktakelahiran->nama_lengkap}}" disabled placeholder="{{$aktakelahiran->nama_lengkap}}" name="Nama_Lengkap">
+                                      <input type="text" class="form-control" value="{{$aktakelahiran->nama_lengkap}}" placeholder="{{$aktakelahiran->nama_lengkap}}" name="Nama_Lengkap">
                                     </div>
                                     <div class="mb-3">
                                       <label class="form-label">Foto diri</label>
@@ -45,7 +45,7 @@
                                     @endif
                                     <div class="mb-3">
                                       <label class="form-label">Nomor Kartu-Keluarga</label>
-                                      <input placeholder="{{$aktakelahiran->no_KK}}" disabled value="{{$aktakelahiran->no_KK}}" type="text" name="no_KK" class="form-control" >
+                                      <input placeholder="{{$aktakelahiran->no_KK}}" value="{{$aktakelahiran->no_KK}}" type="text" name="no_KK" class="form-control" >
                                     </div>
                                     <div class="mb-3">
                                         <label class="form-label">Surat Keterangan</label>

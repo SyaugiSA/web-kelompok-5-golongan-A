@@ -13,6 +13,7 @@ class KartuTandaPenduduk extends Model
     //mendefinisikan primary key adalah nik
     protected $primaryKey = 'No_Reg';
 
+
     //menambahkan fillable
     //Variable $fillable berguna untuk mendaftarkan atribut (nama kolom) yang bisa kita isi ketika melakukan insert atau update ke database
     protected $fillable = [
