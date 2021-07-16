@@ -27,10 +27,15 @@ class KartuTandaPendudukUserController extends Controller
 
     public function create($user)
     {
-        $nik = AktaKelahiran::find($user);
-        $aktakelahiran = DB::table('akta_kelahirans')->where('NIK', '=', $user)->first();
-        // dd($aktakelahiran);
 
+        $nik_akta = DB::table('akta_kelahirans')->where('NIK', '=', $user)->first('NIK');
+        // dd($nik_akta)
+
+        if ($nik_akta == null) {
+            return redirect('ktp_user')
+                ->with('success', 'data anda belum terdaftar');
+        }
+        $aktakelahiran = DB::table('akta_kelahirans')->where('NIK', '=', $user)->first();
 
 
         return view('frontend.ktp_user.create', ['aktakelahiran' => $aktakelahiran]);
