@@ -72,13 +72,13 @@
 			    <li class="nav-item"><a class="nav-link" href="#">Bantuan</a></li>
 
 			   <li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="{{asset('Auth/login/blog-sidebar.html')}}" id="dropdown05" data-toggle="dropdown"
+					<a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown"
                      aria-haspopup="true" aria-expanded="false">Akun <i class="icofont-thin-down"></i></a>
                      
 					<ul class="dropdown-menu" aria-labelledby="dropdown05">
-						<li><a class="dropdown-item" href="{{asset('Auth/login/blog-sidebar.html')}}">Edit Akun</a></li>
+						<li><a class="dropdown-item" href="#">Edit Akun</a></li>
 
-						<li><a class="dropdown-item" href="{{asset('Auth/login/blog-single.html')}}">Keluar Akun</a></li>
+						<li><a class="dropdown-item" href="#">Keluar Akun</a></li>
 					</ul>
 			  	</li>
 			</ul>
