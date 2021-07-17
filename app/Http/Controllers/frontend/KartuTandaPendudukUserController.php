@@ -29,7 +29,7 @@ class KartuTandaPendudukUserController extends Controller
     {
 
         $nik_akta = DB::table('akta_kelahirans')->where('NIK', '=', $user)->first('NIK');
-        $cek_nik =  DB::table('akta_kelahirans')->where('NIK', '=', $user)->get('NIK');
+        $cek_nik =  DB::table('kartu_tanda_penduduks')->where('NIK', '=', $user)->first('NIK');
         // dd($cek_nik);
 
 
@@ -41,8 +41,6 @@ class KartuTandaPendudukUserController extends Controller
                 ->with('success', 'Anda Sudah Pernah Mendaftar');
         }
         $aktakelahiran = DB::table('akta_kelahirans')->where('NIK', '=', $user)->first();
-
-
         return view('frontend.ktp_user.create', ['aktakelahiran' => $aktakelahiran]);
     }
 
@@ -79,6 +77,7 @@ class KartuTandaPendudukUserController extends Controller
             'surat_keterangan' => $surat_keterangan,
         ]);
 
-        return redirect('ktp_user');
+        return redirect('ktp_user')
+            ->with('succes', 'Data anda berhasil ditambahkan');
     }
 }
