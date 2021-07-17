@@ -70,14 +70,14 @@ class KartuTandaPendudukUserController extends Controller
         KartuTandaPenduduk::create([
             'NIK' => $request->NIK,
             'Nama_Lengkap' => $request->Nama_Lengkap,
-            'foto_diri' => $foto_diri,
+            'foto_diri' => $nama_foto_diri,
             'no_KK' => $request->no_KK,
             'tanggal' => $request->tanggal,
             'status' => 'Menunggu',
-            'surat_keterangan' => $surat_keterangan,
+            'surat_keterangan' => $nama_surat_keterangan,
         ]);
 
         return redirect('ktp_user')
-            ->with('succes', 'Data anda berhasil ditambahkan');
+            ->with('success', 'Data anda berhasil ditambahkan');
     }
 }

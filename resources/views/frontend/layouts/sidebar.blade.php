@@ -27,16 +27,6 @@
                 <div class="row">
                     <div class="col-4 link-wrap">
                         <!-- item-->
-                        <a href="" class="link" data-toggle="tooltip" title="" data-original-title="Settings"><i
-                                class="ti-settings"></i></a>
-                    </div>
-                    <div class="col-4 link-wrap">
-                        <!-- item-->
-                        <a href="" class="link" data-toggle="tooltip" title="" data-original-title="Email"><i
-                                class="mdi mdi-gmail"></i></a>
-                    </div>
-                    <div class="col-4 link-wrap">
-                        <!-- item-->
                         <a href="{{ route('logout') }}" class="link" data-toggle="tooltip" title="" data-original-title="Logout" onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
                         

@@ -42,6 +42,7 @@ class KartuTandaPendudukController extends Controller
         $kartutandapenduduk->status = $request->status;
         $kartutandapenduduk->save();
 
-        return redirect('kartutandapenduduk');
+        return redirect('kartutandapenduduk')
+            ->with('success', 'Status berhasil diperbarui');
     }
 }

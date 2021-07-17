@@ -71,16 +71,12 @@
 			   <li class="nav-item"><a class="nav-link" href="#">Status Pengajuan</a></li>
 			    <li class="nav-item"><a class="nav-link" href="#">Bantuan</a></li>
 
-			   <li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown"
-                     aria-haspopup="true" aria-expanded="false">Akun <i class="icofont-thin-down"></i></a>
-                     
-					<ul class="dropdown-menu" aria-labelledby="dropdown05">
-						<li><a class="dropdown-item" href="#">Edit Akun</a></li>
-
-						<li><a class="dropdown-item" href="#">Keluar Akun</a></li>
-					</ul>
-			  	</li>
+			  @if (Route::has('login'))
+			  <li class="nav-item dropdown">
+				   <a class="nav-link" href="{{url('login')}}" id="dropdown05"
+					 aria-expanded="false">Masuk <i class="icofont-thin-down"></i></a>
+				 </li>
+			  @endif
 			</ul>
 		  </div>
 		</div>
