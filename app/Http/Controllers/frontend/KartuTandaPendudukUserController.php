@@ -36,9 +36,6 @@ class KartuTandaPendudukUserController extends Controller
         if ($nik_akta == null) {
             return redirect('ktp_user')
                 ->with('success', 'data anda belum terdaftar');
-        } elseif ($cek_nik) {
-            return redirect('ktp_user')
-                ->with('success', 'Anda Sudah Pernah Mendaftar');
         }
         $aktakelahiran = DB::table('akta_kelahirans')->where('NIK', '=', $user)->first();
         return view('frontend.ktp_user.create', ['aktakelahiran' => $aktakelahiran]);

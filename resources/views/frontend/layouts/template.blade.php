@@ -104,7 +104,7 @@
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="{{asset('frontend/assets/images/users/1.jpg')}}" alt="user" class="profile-pic me-2">Markarn Doe
+                                {{Auth::user()->NIK}}
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown"></ul>
                         </li>

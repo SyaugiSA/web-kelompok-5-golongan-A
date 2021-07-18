@@ -46,7 +46,7 @@
                                     {{ csrf_field() }}
                                     <div class="mb-3">
                                       <label class="form-label">NOMOR NIK PEMOHON</label>
-                                      <input type="text" class="form-control" value="" placeholder="" id="NIK_Pengajuan" name="nik_pemohon">
+                                      <input type="text" class="form-control" value="{{Auth::user()->NIK}}" placeholder="" id="NIK_Pengajuan" name="nik_pemohon">
                                     </div>
                                     @if ($errors->has('NIK'))
                                         <span class="text-danger small">

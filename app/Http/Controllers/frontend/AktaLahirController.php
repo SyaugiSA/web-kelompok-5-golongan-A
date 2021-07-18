@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
-use App\Models\AktaLahir;
+use App\Models\AktaKelahiran;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -61,7 +61,7 @@ class AktaLahirController extends Controller
 
         $path = $file_administrasi->store('public/files/file_administrasi');
 
-        AktaLahir::create([
+        AktaKelahiran::create([
             'nik_pemohon' => $request->nik_pemohon,
             'nama_lengkap' => $request->nama_lengkap,
             'jenis_kelamin' => $request->jenis_kelamin,
