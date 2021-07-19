@@ -15,10 +15,12 @@ class AktaKelahiran extends Model
 
     protected $fillable = [
         'NIK',
+        'nik_pemohon',
         'nama_lengkap',
         'jenis_kelamin',
         'tempat_lahir',
-        'tanggal_waktu_lahir',
+        'tanggal_lahir',
+        'waktu_lahir',
         'tempat_dilahirkan',
         'jenis_kelahiran',
         'kelahiran_ke',
@@ -27,6 +29,8 @@ class AktaKelahiran extends Model
         'tinggi',
         'no_KK',
         'nama_kepala_keluarga',
-        'noHP'
+        'noHP',
+        'file_administrasi',
+        'status'
     ];
 }

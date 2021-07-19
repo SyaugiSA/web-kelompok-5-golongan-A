@@ -66,6 +66,8 @@ Route::group(
 
         //route ini mengarah ke method update di controller aktakelahiran controller serta membawa nomor registrasi
         Route::put('/aktakelahiran/update/{No_Reg}', 'AktaKelahiranController@update');
+
+        Route::put('/aktakelahiran/update_nik/{No_Reg}', 'AktaKelahiranController@update_nik');
     }
 );
 Route::group(

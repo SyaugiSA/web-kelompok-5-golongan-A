@@ -15,7 +15,7 @@ class CreateKartuTandaPenduduksTable extends Migration
     {
         Schema::create('kartu_tanda_penduduks', function (Blueprint $table) {
             $table->bigIncrements("No_Reg");
-            $table->bigInteger('NIK')->unique();
+            $table->bigInteger('NIK');
             $table->string('Nama_Lengkap', 100);
             $table->string('foto_diri');
             $table->date('tanggal');

@@ -27,17 +27,23 @@ class KartuTandaPendudukUserController extends Controller
 
     public function create($user)
     {
-        $nik = AktaKelahiran::find($user);
+
+        $nik_akta = DB::table('akta_kelahirans')->where('NIK', '=', $user)->first('NIK');
+        $cek_nik =  DB::table('kartu_tanda_penduduks')->where('NIK', '=', $user)->first('NIK');
+        // dd($cek_nik);
+
+
+        if ($nik_akta == null) {
+            return redirect('ktp_user')
+                ->with('success', 'data anda belum terdaftar');
+        }
         $aktakelahiran = DB::table('akta_kelahirans')->where('NIK', '=', $user)->first();
-        // dd($aktakelahiran);
-
-
-
         return view('frontend.ktp_user.create', ['aktakelahiran' => $aktakelahiran]);
     }
 
     public function store(Request $request)
     {
+        // dd($request->all());
         $message = [
             'required' => 'form ini wajib di isi!'
         ];
@@ -68,6 +74,7 @@ class KartuTandaPendudukUserController extends Controller
             'surat_keterangan' => $nama_surat_keterangan,
         ]);
 
-        return redirect('ktp_user');
+        return redirect('ktp_user')
+            ->with('success', 'Data anda berhasil ditambahkan');
     }
 }

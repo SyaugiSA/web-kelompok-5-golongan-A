@@ -28,7 +28,15 @@
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
-                
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Data Pengajuan AKTA KELAHIRAN</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <!-- column -->
                     <div class="col-sm-12">
@@ -42,7 +50,7 @@
                                         <thead>
                                             <tr>
                                                 <th class="border-top-0">No. reg</th>
-                                                <th class="border-top-0">NIK</th>
+                                                <th class="border-top-0">NIK Pemohon</th>
                                                 <th class="border-top-0">Nama</th>
                                                 <th class="border-top-0">Tanggal</th>
                                                 <th class="border-top-0">status</th>
@@ -53,7 +61,7 @@
                                             @foreach ($data as $item)
                                                 <tr>
                                                     <td>{{$item->No_Reg}}</td>
-                                                    <td>{{$item->NIK}}</td>
+                                                    <td>{{$item->nik_pemohon}}</td>
                                                     <td>{{$item->nama_lengkap}}</td>
                                                     <td>{{$item->tanggal_lahir}}</td>
                                                     {{-- link ini akan mengarah ke route '/aktakelahiran/edit/{{no_reg}}' sambil membawa

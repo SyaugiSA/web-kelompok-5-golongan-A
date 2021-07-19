@@ -45,8 +45,8 @@
                                 <form action="/aktakelahiran_user/store" method="POST" enctype="multipart/form-data">
                                     {{ csrf_field() }}
                                     <div class="mb-3">
-                                      <label class="form-label">Nomor NIK</label>
-                                      <input type="text" class="form-control" value="" placeholder="" id="NIK_Pengajuan" name="NIK">
+                                      <label class="form-label">NOMOR NIK PEMOHON</label>
+                                      <input type="text" class="form-control" value="{{Auth::user()->NIK}}" placeholder="" id="NIK_Pengajuan" name="nik_pemohon">
                                     </div>
                                     @if ($errors->has('NIK'))
                                         <span class="text-danger small">

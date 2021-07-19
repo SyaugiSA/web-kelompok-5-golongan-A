@@ -18,6 +18,13 @@
                             <div class="card-body">
                                 <h4 class="card-title">Data Pengajuan Cetak KTP Status PRR</h4>
                                 <h6 class="card-subtitle">KHUSUS BAGI WARGA YANG PERNAH MELAKUKAN PEREKAMAN DATA DIRI </h6>
+                                <div class="panel-body">
+                                    @if ($message = Session::get('success'))
+                                        <div class="alert alert-success">
+                                            <h5>{{$message}}</h5>
+                                        </div>
+                                    @endif
+                                </div>
                             </div>
                         </div>
                     </div>

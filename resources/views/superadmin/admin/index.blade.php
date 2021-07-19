@@ -39,7 +39,7 @@
                             <p>{{ $message }}</p>
                         </div>
                         @endif
-                        <a href="{{ route('admin.create') }}"><button class="btn btn-primary"
+                        <a href="{{ route('super.create') }}"><button class="btn btn-primary"
                             type="button"><li class="fa fa-plus">Tambah</li></button></a>
                     <br><br>
                     <table class="table table-striped table-advance table-hover">
@@ -52,11 +52,11 @@
                             @foreach ($admin as $item)
                             <tr>
                                 <td>{{$item->email}}</td>
-                                    <td>{{$item->password}}</td>
+                                    <td>*****************</td>
                                 <td>
                                     <div class="btn-group">
-                                    <form action="{{ route('admin.destroy',$item->id) }}" method="POST">
-                                    <a class="btn btn-warning" href="{{ route('admin.edit',$item->id) }}" >
+                                    <form action="{{ route('super.destroy',$item->id) }}" method="POST">
+                                    <a class="btn btn-warning" href="{{ route('super.edit',$item->id) }}" >
                                         <i class="far fa-edit"></i></a>
                                                 @csrf
                                                 @method('DELETE')

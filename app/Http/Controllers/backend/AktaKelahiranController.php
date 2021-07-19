@@ -37,6 +37,21 @@ class AktaKelahiranController extends Controller
         $aktakelahiran->status = $request->status;
         $aktakelahiran->save();
 
-        return redirect('aktakelahiran');
+        return redirect('aktakelahiran')
+            ->with('success', 'Status telah diperbarui');
+    }
+
+    public function update_nik($No_Reg, Request $request)
+    {
+        $this->validate($request, [
+            'NIK' => 'required'
+        ]);
+        $aktakelahiran = AktaKelahiran::find($No_Reg);
+
+        $aktakelahiran->NIK = $request->NIK;
+        $aktakelahiran->save();
+
+        return redirect('aktakelahiran')
+            ->with('success', 'NIK baru telah berhasil ditambah');
     }
 }

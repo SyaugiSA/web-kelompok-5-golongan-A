@@ -31,8 +31,12 @@
 			<div class="row align-items-center">
 				<div class="col-lg-6">
 					<ul class="top-bar-info list-inline-item pl-0 mb-0">
-						<li class="list-inline-item"><a href="mailto:infodispendukcapiljember@gmail.com"><i class="icofont-support-faq mr-2"></i>infodispendukcapiljember@gmail.com</a></li>
-						<li class="list-inline-item"><a href="https://goo.gl/maps/P9oFdLwhS94PtWs6A"><i class="icofont-location-pin mr-2"></i>Jl. Jawa No. 18 Sumbersari </a></li>
+						<li class="list-inline-item"><a href="mailto:infodispendukcapiljember@gmail.com"><i class="icofont-support-faq mr-2">
+                        </i>infodispendukcapiljember@gmail.com</a></li>
+
+						<li class="list-inline-item"><a href="https://goo.gl/maps/P9oFdLwhS94PtWs6A"><i class="icofont-location-pin mr-2">
+                        </i>Jl. Jawa No. 18 Sumbersari </a></li>
+
 					</ul>
 				</div>
 				<div class="col-lg-6">
@@ -48,38 +52,37 @@
 	</div>
 	<nav class="navbar navbar-expand-lg navigation" id="navbar">
 		<div class="container">
+
 		 	 <a class="navbar-brand" href="welcome.blade.php">
 			  	<img src="{{asset('Auth/login/logo_small.png')}}" alt="" class="img-fluid">
 			  </a>
 
-		  	<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmain" aria-controls="navbarmain" aria-expanded="false" aria-label="Toggle navigation">
+		  	<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmain" aria-controls="navbarmain"
+             aria-expanded="false" aria-label="Toggle navigation">
+
 			<span class="icofont-navigation-menu"></span>
 		  </button>
 	  
 		  <div class="collapse navbar-collapse" id="navbarmain">
 			<ul class="navbar-nav ml-auto">
 			  <li class="nav-item active">
-				<a class="nav-link" href="index.html">Beranda</a>
+				<a class="nav-link" href="welcome.blade.php">Beranda</a>
 			  </li>
-			   <li class="nav-item"><a class="nav-link" href="about.html">Status Pengajuan</a></li>
-			    <li class="nav-item"><a class="nav-link" href="service.html">Bantuan</a></li>
+			   <li class="nav-item"><a class="nav-link" href="#">Status Pengajuan</a></li>
+			    <li class="nav-item"><a class="nav-link" href="#">Bantuan</a></li>
 
-			   <li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="blog-sidebar.html" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Akun <i class="icofont-thin-down"></i></a>
-					<ul class="dropdown-menu" aria-labelledby="dropdown05">
-						<li><a class="dropdown-item" href="blog-sidebar.html">Edit Akun</a></li>
-
-						<li><a class="dropdown-item" href="blog-single.html">Keluar Akun</a></li>
-					</ul>
-			  	</li>
+			  @if (Route::has('login'))
+			  <li class="nav-item dropdown">
+				   <a class="nav-link" href="{{url('login')}}" id="dropdown05"
+					 aria-expanded="false">Masuk <i class="icofont-thin-down"></i></a>
+				 </li>
+			  @endif
 			</ul>
 		  </div>
 		</div>
 	</nav>
 </header>
 	
-
-
 
 <!-- Slider Start -->
 <section class="banner">
@@ -235,7 +238,7 @@
 			<div class="col-lg-4 mr-auto col-sm-6">
 				<div class="widget mb-5 mb-lg-0">
 					<div class="logo mb-4">
-						<img src="images/logo_small.png" alt="" class="img-fluid">
+						<img src="{{asset('Auth/login/logo_small.png')}}" alt="" class="img-fluid">
 					</div>
 					<p>LAYANAN ONLINE DINAS KEPENDUDUKAN DAN PENCATATAN SIPIL KABUPATEN JEMBER </p>
 				</div>
@@ -311,24 +314,24 @@
 
     
     <!-- Main jQuery -->
-    <script src="plugins/jquery/jquery.js"></script>
+    <script src="{{asset('Auth/login/jquery.js')}}"></script>
     <!-- Bootstrap 4.3.2 -->
-    <script src="plugins/bootstrap/js/popper.js"></script>
-    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="plugins/counterup/jquery.easing.js"></script>
+    <script src="{{asset('Auth/login/popper.js')}}"></script>
+    <script src="{{asset('Auth/login/bootstrap.min.js')}}"></script>
+    <script src="{{asset('Auth/login/jquery.easing.js')}}"></script>
     <!-- Slick Slider -->
-    <script src="plugins/slick-carousel/slick/slick.min.js"></script>
+    <script src="{{asset('Auth/login/slick.min.js')}}"></script>
     <!-- Counterup -->
-    <script src="plugins/counterup/jquery.waypoints.min.js"></script>
+    <script src="{{asset('Auth/login/jquery.waypoints.min.js')}}"></script>
     
-    <script src="plugins/shuffle/shuffle.min.js"></script>
-    <script src="plugins/counterup/jquery.counterup.min.js"></script>
+    <script src="{{asset('Auth/login/shuffle.min.js')}}"></script>
+    <script src="{{asset('Auth/login/jquery.counterup.min.js')}}"></script>
     <!-- Google Map -->
-    <script src="plugins/google-map/map.js"></script>
+    <script src="{{asset('Auth/login/map.js')}}"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>    
     
-    <script src="js/script.js"></script>
-    <script src="js/contact.js"></script>
+    <script src="{{asset('Auth/login/script.js')}}"></script>
+    <script src="{{asset('Auth/login/contact.js')}}"></script>
 
   </body>
   </html>
