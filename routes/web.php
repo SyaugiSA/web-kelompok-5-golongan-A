@@ -17,7 +17,7 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::group(
     ['namespace' => 'Frontend', 'middleware' => ['auth']],
@@ -76,21 +76,5 @@ Route::group(
         Route::resource('super', 'AdminController');
     }
 );
-// });
-
-// Route::middleware(['auth', 'user'])->group(function () {
-// });
-
-
-
-// Route::resource('super', 'superadmin\SuperController');
-
-// Route::middleware(['auth', 'user'])->group(
-//     function () {
-//         Route::get('/dashboard', [\App\Http\Controllers\Backend\DashboardController::class, 'index']);
-//         Route::get('/home', [App\Http\Controllers\Frontend\HomeController::class, 'index']);
-//         Route::get('/super', [App\Http\Controllers\superadmin\SuperController::class, 'index']);
-//     }
-// );
 
 Auth::routes();

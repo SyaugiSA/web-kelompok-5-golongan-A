@@ -50,7 +50,7 @@
                     <!-- ============================================================== -->
                     <!-- Logo -->
                     <!-- ============================================================== -->
-                    <a class="navbar-brand ms-4" href="index.html">
+                    <a class="navbar-brand ms-4" href="{{route('welcome')}}">
                         <!-- Logo text -->
                         <span class="logo-text">
                             <!-- dark Logo text -->

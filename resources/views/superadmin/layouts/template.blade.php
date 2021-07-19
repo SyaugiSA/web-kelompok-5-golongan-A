@@ -50,7 +50,7 @@
                     <!-- ============================================================== -->
                     <!-- Logo -->
                     <!-- ============================================================== -->
-                    <a class="navbar-brand ms-4" href="index.html">
+                    <a class="navbar-brand ms-4" href="{{route('welcome')}}">
                         <!-- Logo text -->
                         <span class="logo-text">
                             <!-- dark Logo text -->
@@ -75,36 +75,6 @@
                         <li class="nav-item">
                             <a class="nav-toggler nav-link waves-effect waves-light text-white "
                                 href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
-                        </li>
-                    </ul>
-                    <!-- ============================================================== -->
-                    <!-- toggle and nav items -->
-                    <!-- ============================================================== -->
-                    <ul class="navbar-nav me-auto mt-md-0 ">
-                        <!-- ============================================================== -->
-                        <!-- Search -->
-                        <!-- ============================================================== -->
-
-                        <li class="nav-item search-box">
-                            <a class="nav-link text-muted" href="javascript:void(0)"><i class="ti-search"></i></a>
-                            <form class="app-search" style="display: none;">
-                                <input type="text" class="form-control" placeholder="Search &amp; enter"> <a
-                                    class="srh-btn"><i class="ti-close"></i></a> </form>
-                        </li>
-                    </ul>
-
-                    <!-- ============================================================== -->
-                    <!-- Right side toggle and nav items -->
-                    <!-- ============================================================== -->
-                    <ul class="navbar-nav">
-                        <!-- ============================================================== -->
-                        <!-- User profile and search -->
-                        <!-- ============================================================== -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="{{asset('superadmin/assets/images/users/1.jpg')}}" alt="user" class="profile-pic me-2">Markarn Doe
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown"></ul>
                         </li>
                     </ul>
                 </div>

@@ -72,10 +72,18 @@
 			    <li class="nav-item"><a class="nav-link" href="#">Bantuan</a></li>
 
 			  @if (Route::has('login'))
-			  <li class="nav-item dropdown">
-				   <a class="nav-link" href="{{url('login')}}" id="dropdown05"
-					 aria-expanded="false">Masuk <i class="icofont-thin-down"></i></a>
-				 </li>
+				<li class="nav-item dropdown">
+					@if (isset (Auth::user()->NIK) && isset(Auth::user()->email))
+						<a class="nav-link" href="{{url('login')}}" id="dropdown05"
+						aria-expanded="false">{{Auth::user()->NIK}} <i class="icofont-thin-down"></i></a>
+					@elseif (isset(Auth::user()->email))
+						<a class="nav-link" href="{{url('login')}}" id="dropdown05"
+						aria-expanded="false">{{Auth::user()->email}} <i class="icofont-thin-down"></i></a>
+					@else
+						<a class="nav-link" href="{{url('login')}}" id="dropdown05"
+							aria-expanded="false">Masuk <i class="icofont-thin-down"></i></a>
+					@endif
+				</li>
 			  @endif
 			</ul>
 		  </div>
