@@ -5,6 +5,7 @@ namespace App\Http\Controllers\superadmin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 
 use App\Models\Admin;
 
@@ -23,8 +24,8 @@ class AdminController extends Controller
     public function store(Request $request)
     {
         DB::table('users')->insert([
-            'email'=> $request->id,
-            'password' => $request->password,
+            'email'=> $request->email,
+            'password' => Hash::make($request->password),
             'hak_akses'=>2
         ]);
 
@@ -40,7 +41,7 @@ class AdminController extends Controller
     {
         DB::table('users')->where('id', $request->id)->update([
             'email'=> $request->email,
-            'password' => $request->password,
+            'password' => Hash::make($request->password),
         ]);
 
         return redirect()->route('super.index')
