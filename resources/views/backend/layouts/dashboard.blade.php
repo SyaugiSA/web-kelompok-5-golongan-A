@@ -28,7 +28,35 @@
     <!-- Container fluid  -->
     <!-- ============================================================== -->
     <div class="container-fluid">
-       
+        <div class="row">
+            
+            <div class="col-md-6 col-sm-12 mb-3">
+                <div class="card">
+
+                    <div class="card-body">
+                        <div class="card-title"><h4>Akta Kelahiran</h4></div>
+                       Berikut data dan jumalh pemohon Akta Kelahiran
+                    </div>
+
+                    <div class="card-footer">
+                        <a href="{{url ('aktakelahiran')}}" class="card-link">Lihat</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6 mb-3">
+                <div class="card">
+
+                    <div class="card-body">
+                        <div class="card-title"><h4>KTP</h4></div>
+                        Berikut data  dan jumlah pemohon Kartu Tanda Penduduk
+                    </div>
+
+                    <div class="card-footer">
+                        <a href="{{url ('kartutandapenduduk')}}" class="card-link">Lihat</a>
+                    </div>
+                </div>
+            </div>
         
     </div>
     <!-- ============================================================== -->
