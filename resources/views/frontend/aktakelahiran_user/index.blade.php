@@ -54,6 +54,7 @@
                                                 <th class="border-top-0">Nama</th>
                                                 <th class="border-top-0">Tanggal</th>
                                                 <th class="border-top-0">status</th>
+                                                <th class="border-top-0">Detail</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -67,6 +68,7 @@
                                                     {{-- link ini akan mengarah ke route '/aktakelahiran/edit/{{no_reg}}' sambil membawa
                                                         no_reg pegawai yang ingin dilihat detailnya--}}
                                                         <td><button disabled class="btn btn-warning">{{$item->status}}</button></td>
+                                                        <td><a href="/aktakelahiran_user/detail/{{$item->No_Reg}}" class="btn btn-warning" >Detail</a>
                                                 </tr>
                                             @endforeach
                                         </tbody>

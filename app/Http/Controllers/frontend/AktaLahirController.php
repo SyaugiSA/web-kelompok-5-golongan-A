@@ -20,6 +20,15 @@ class AktaLahirController extends Controller
         return view('frontend.aktakelahiran_user.index', compact('data', 'user'));
     }
 
+    public function detail($No_Reg)
+    {
+        //pada method find::id digunakan untuk menemukan no_reg yang sesuai di table akta_kelahiran
+        $aktakelahiran = AktaKelahiran::find($No_Reg);
+
+        // $aktakelahiran = AktaKelahiran::all();
+        return view('frontend.aktakelahiran_user.detail', compact('aktakelahiran'));
+    }
+
     public function create()
     {
         return view('frontend.aktakelahiran_user.create');

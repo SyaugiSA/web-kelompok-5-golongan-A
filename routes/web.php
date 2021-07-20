@@ -24,7 +24,8 @@ Route::group(
     function () {
         Route::resource('home', 'HomeController');
         Route::resource('aktakelahiran_user', 'AktaLahirController');
-        Route::get('/aktakelahiran/detail/{No_Reg}', 'AktaLahirController@detail');
+
+        Route::get('/aktakelahiran_user/detail/{No_Reg}', 'AktaLahirController@detail');
 
         Route::get('/aktakelahiran_user/create', 'AktaLahirController@create');
 
@@ -36,8 +37,11 @@ Route::group(
         //route ini mengarah ke controller kartutandapendudukusercontroller serta membawa nik user
         Route::get('ktp_user/create/{user}', 'KartuTandaPendudukUserController@create');
 
-        //
+        //route ini mengarah ke controller kartutandapendudukusercontroller ke function store
         Route::post('ktp_user/store', 'KartuTandaPendudukUserController@store');
+
+
+        // Route::get('/aktakelahiran_user/detail{No_Reg}', 'AktaLahirController@detail');
     }
 );
 
