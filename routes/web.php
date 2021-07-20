@@ -40,8 +40,7 @@ Route::group(
         //route ini mengarah ke controller kartutandapendudukusercontroller ke function store
         Route::post('ktp_user/store', 'KartuTandaPendudukUserController@store');
 
-
-        // Route::get('/aktakelahiran_user/detail{No_Reg}', 'AktaLahirController@detail');
+        Route::get('ktp_user/detail/{No_Reg}', 'KartuTandaPendudukUserController@detail');
     }
 );
 

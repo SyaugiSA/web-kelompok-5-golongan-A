@@ -41,6 +41,12 @@ class KartuTandaPendudukUserController extends Controller
         return view('frontend.ktp_user.create', ['aktakelahiran' => $aktakelahiran]);
     }
 
+    public function detail($No_Reg)
+    {
+        $kartutandapenduduk = KartuTandaPenduduk::find($No_Reg);
+        return view('frontend.ktp_user.detail', compact('kartutandapenduduk'));
+    }
+
     public function store(Request $request)
     {
         // dd($request->all());

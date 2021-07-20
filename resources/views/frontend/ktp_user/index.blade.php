@@ -45,7 +45,7 @@
                                                 <th class="border-top-0">NAMA LENGKAP</th>
                                                 <th class="border-top-0">TANGGAL</th>
                                                 <th class="border-top-0">STATUS</th>
-                                                <th class="border-top-0">AKSI</th>
+                                                <th class="border-top-0">DETAIL</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -60,6 +60,7 @@
                                                      <td>{{$item->Nama_Lengkap}}</td>
                                                      <td>{{$item->tanggal}}</td>
                                                      <td><button disabled class="btn btn-warning">{{$item->status}}</button></td>
+                                                     <td><a href="/ktp_user/detail/{{$item->No_Reg}}" class="btn btn-warning" >Detail</a>
                                                  </tr>
                                              @endforeach
                                         </tbody>
