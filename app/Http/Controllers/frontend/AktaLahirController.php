@@ -92,9 +92,10 @@ class AktaLahirController extends Controller
         return redirect('aktakelahiran_user');
     }
 
-    public function getAll()
+    public function getAll($user)
     {
-        $aktakelahiran = AktaKelahiran::all();
+        // AktaKelahiran::where('nik_pemohon', '=', $user)->exists();
+        $aktakelahiran = AktaKelahiran::where('nik_pemohon', '=', $user)->get();
         return response()->json(['aktakelahiran' => $aktakelahiran], 200);
     }
 }

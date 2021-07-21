@@ -21,8 +21,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::group(
     ['namespace' => 'Frontend'],
     function () {
-        Route::get('kartutandapenduduk', 'KartuTandaPendudukUserController@getAll');
+        Route::get('kartutandapenduduk/{user}', 'KartuTandaPendudukUserController@getAll');
 
-        Route::get('aktakelahiran', 'AKtaLahirController@getAll');
+        Route::get('aktakelahiran/{user}', 'AKtaLahirController@getAll');
     }
 );

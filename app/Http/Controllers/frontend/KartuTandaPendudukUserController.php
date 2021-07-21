@@ -84,9 +84,19 @@ class KartuTandaPendudukUserController extends Controller
             ->with('success', 'Data anda berhasil ditambahkan');
     }
 
-    public function getAll()
+    public function getAll($user)
     {
-        $kartutandapenduduk = KartuTandaPenduduk::all();
-        return response()->json(['kartutandapenduduk' => $kartutandapenduduk], 200);
+        KartuTandaPenduduk::where('NIK', '=', $user)->exists();
+        $ktp = KartuTandaPenduduk::where('NIK', '=', $user)->get();
+        return response()->json(['ktp' => $ktp], 200);
+
+        // if (KartuTandaPenduduk::where('NIK', '=', $user)->exists()) {
+        //     $ktp = KartuTandaPenduduk::where('NIK', '=', $user)->get();
+        //     return response()->json(['ktp' => $ktp], 200);
+        // } else {
+        //     return response()->json([
+        //         'message' => 'anda belum terdaftar'
+        //     ]);
+        // }
     }
 }
