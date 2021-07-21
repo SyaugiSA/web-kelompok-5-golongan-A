@@ -464,8 +464,7 @@ a:focus {
 .banner {
   position: relative;
   overflow: hidden;
-  background: #fff;
-  background: url('../public/Auth/login/bg-1.jpg') no-repeat;
+  background: #F4F9FC;
   background-size: cover;
   min-height: 550px;
 }
@@ -1490,4 +1489,4 @@ a:focus {
   opacity: 1;
 }
 
-/*# sourceMappingURL=maps/style.css.map */
+/*# sourceMappingURL=public/Auth/login/style.css.map */

@@ -31,10 +31,14 @@
 			<div class="row align-items-center">
 				<div class="col-lg-6">
 					<ul class="top-bar-info list-inline-item pl-0 mb-0">
-						<li class="list-inline-item"><a href="mailto:infodispendukcapiljember@gmail.com"><i class="icofont-support-faq mr-2">
+						<li class="list-inline-item">
+							<span>Email : </span>
+							<a href="mailto:infodispendukcapiljember@gmail.com">
                         </i>infodispendukcapiljember@gmail.com</a></li>
 
-						<li class="list-inline-item"><a href="https://goo.gl/maps/P9oFdLwhS94PtWs6A"><i class="icofont-location-pin mr-2">
+						<li class="list-inline-item">
+							<span>Alamat : </span>
+							<a href="https://goo.gl/maps/P9oFdLwhS94PtWs6A">
                         </i>Jl. Jawa No. 18 Sumbersari </a></li>
 
 					</ul>
@@ -81,7 +85,7 @@
 						aria-expanded="false">{{Auth::user()->email}} <i class="icofont-thin-down"></i></a>
 					@else
 						<a class="nav-link" href="{{url('login')}}" id="dropdown05"
-							aria-expanded="false">Masuk <i class="icofont-thin-down"></i></a>
+							aria-expanded="false">Masuk </a>
 					@endif
 				</li>
 			  @endif
@@ -101,7 +105,7 @@
 					<div class="divider mb-3"></div>
 					<span class="text-uppercase text-sm letter-spacing ">SELAMAT DATANG DI LAYANAN ONLINE</span>
 					<h1 class="mb-3 mt-3">Dinas Kependudukan dan Pencatatan Sipil Kabupaten Jember</h1>
-
+					
 				</div>
 			</div>
 		</div>
@@ -115,7 +119,7 @@
 				<div class="feature-block d-lg-flex">
 					<div class="feature-item mb-5 mb-lg-0">
 						<div class="feature-icon mb-4">
-							<i class="icofont-ui-text-chat"></i>
+							<!-- <i class="icofont-ui-text-chat"></i> -->
 						</div>
 						<span>Pelayanan 24 Jam</span>
 						<h4 class="mb-3">Pelayanan Daring</h4>
@@ -124,7 +128,7 @@
 				
 					<div class="feature-item mb-5 mb-lg-0">
 						<div class="feature-icon mb-4">
-							<i class="icofont-ui-clock"></i>
+							<!-- <i class="icofont-ui-clock"></i> -->
 						</div>
 						<span>Jadwal Waktu</span>
 						<h4 class="mb-3">Jam Kerja</h4>
@@ -136,7 +140,7 @@
 				
 					<div class="feature-item mb-5 mb-lg-0">
 						<div class="feature-icon mb-4">
-							<i class="icofont-support"></i>
+							<!-- <i class="icofont-support"></i> -->
 						</div>
 						<span>Pelayanan Whatsapp</span>
 						<h4 class="mb-3">0813-3338-1010</h4>
@@ -164,7 +168,7 @@
 			<div class="col-lg-4 col-md-6 col-sm-6">
 				<div class="service-item mb-4">
 					<div class="icon d-flex align-items-center">
-						<i class="icofont-baby text-lg"></i>
+						<!-- <i class="icofont-baby text-lg"></i> -->
 						<h4 class="mt-3 mb-3">Permohonan Akta Lahir</h4>
 					</div>
 
@@ -177,7 +181,7 @@
 			<div class="col-lg-4 col-md-6 col-sm-6">
 				<div class="service-item mb-4">
 					<div class="icon d-flex align-items-center">
-						<i class="icofont-ui-v-card text-lg"></i>
+						<!-- <i class="icofont-ui-v-card text-lg"></i> -->
 						<h4 class="mt-3 mb-3">Permohonan KTP</h4>
 					</div>
 					<div class="content">
@@ -189,7 +193,7 @@
 			<div class="col-lg-4 col-md-6 col-sm-6">
 				<div class="service-item mb-4">
 					<div class="icon d-flex align-items-center">
-						<i class="icofont-ambulance-cross text-lg"></i>
+						<!-- <i class="icofont-ambulance-cross text-lg"></i> -->
 						<h4 class="mt-3 mb-3">Permohonan Akta Kematian</h4>
 					</div>
 					<div class="content">
@@ -202,7 +206,7 @@
 			<div class="col-lg-4 col-md-6 col-sm-6">
 				<div class="service-item mb-4">
 					<div class="icon d-flex align-items-center">
-						<i class="icofont-card text-lg"></i>
+						<!-- <i class="icofont-card text-lg"></i> -->
 						<h4 class="mt-3 mb-3">Permohonan Kartu Keluarga Baru</h4>
 					</div>
 
@@ -215,7 +219,7 @@
 			<div class="col-lg-4 col-md-6 col-sm-6">
 				<div class="service-item mb-4">
 					<div class="icon d-flex align-items-center">
-						<i class="icofont-card text-lg"></i>
+						<!-- <i class="icofont-card text-lg"></i> -->
 						<h4 class="mt-3 mb-3">Permohonan Kartu Keluarga Hilang atau Rusak</h4>
 					</div>
 					<div class="content">
@@ -227,7 +231,7 @@
 			<div class="col-lg-4 col-md-6 col-sm-6">
 				<div class="service-item mb-4">
 					<div class="icon d-flex align-items-center">
-						<i class="icofont-kid text-lg"></i>
+						<!-- <i class="icofont-kid text-lg"></i> -->
 						<h4 class="mt-3 mb-3">Permohonan Kartu Identitas Anak</h4>
 					</div>
 					<div class="content">
@@ -277,7 +281,6 @@
 
 					<div class="footer-contact-block mb-4">
 						<div class="icon d-flex align-items-center">
-							<i class="icofont-email mr-3"></i>
 							<span class="h6 mb-0">Alamat Email</span>
 						</div>
 						<h4 class="mt-2"><a href="mailto:infodispendukcapiljember@gmail.com">infodispendukcapiljember@gmail.com</a></h4>
@@ -285,7 +288,6 @@
 
 					<div class="footer-contact-block">
 						<div class="icon d-flex align-items-center">
-							<i class="icofont-support mr-3"></i>
 							<span class="h6 mb-0">Whatsapp Center</span>
 						</div>
 						<h4 class="mt-2"><a href="https://api.whatsapp.com/send/?phone=6281132256834&text&app_absent=0">0813-3338-1010</a></h4>
@@ -306,7 +308,7 @@
 			<div class="row">
 				<div class="col-lg-4">
 					<a class="backtop js-scroll-trigger" href="#top">
-						<i class="icofont-long-arrow-up"></i>
+						<!-- <i class="icofont-long-arrow-up"></i> -->
 					</a>
 				</div>
 			</div>
