@@ -29,4 +29,10 @@ class DashboardController extends Controller
     {
         return view('backend.dashboard');
     }
+
+    // public function count()
+    // {
+    //     $count = AktaKelahiran::count();
+    //     return View::make('index')->with('count', $count);
+    // }
 }
