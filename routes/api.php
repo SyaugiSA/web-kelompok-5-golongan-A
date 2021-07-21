@@ -22,5 +22,7 @@ Route::group(
     ['namespace' => 'Frontend'],
     function () {
         Route::get('kartutandapenduduk', 'KartuTandaPendudukUserController@getAll');
+
+        Route::get('aktakelahiran', 'AKtaLahirController@getAll');
     }
 );

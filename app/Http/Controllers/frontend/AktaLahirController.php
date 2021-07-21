@@ -91,4 +91,10 @@ class AktaLahirController extends Controller
         ]);
         return redirect('aktakelahiran_user');
     }
+
+    public function getAll()
+    {
+        $aktakelahiran = AktaKelahiran::all();
+        return response()->json(['aktakelahiran' => $aktakelahiran], 200);
+    }
 }
