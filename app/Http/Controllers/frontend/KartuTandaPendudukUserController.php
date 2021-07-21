@@ -83,4 +83,10 @@ class KartuTandaPendudukUserController extends Controller
         return redirect('ktp_user')
             ->with('success', 'Data anda berhasil ditambahkan');
     }
+
+    public function getAll()
+    {
+        $kartutandapenduduk = KartuTandaPenduduk::all();
+        return response()->json(['kartutandapenduduk' => $kartutandapenduduk], 200);
+    }
 }
