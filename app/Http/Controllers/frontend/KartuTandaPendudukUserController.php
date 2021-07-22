@@ -89,14 +89,5 @@ class KartuTandaPendudukUserController extends Controller
         KartuTandaPenduduk::where('NIK', '=', $user)->exists();
         $ktp = KartuTandaPenduduk::where('NIK', '=', $user)->get();
         return response()->json(['ktp' => $ktp], 200);
-
-        // if (KartuTandaPenduduk::where('NIK', '=', $user)->exists()) {
-        //     $ktp = KartuTandaPenduduk::where('NIK', '=', $user)->get();
-        //     return response()->json(['ktp' => $ktp], 200);
-        // } else {
-        //     return response()->json([
-        //         'message' => 'anda belum terdaftar'
-        //     ]);
-        // }
     }
 }

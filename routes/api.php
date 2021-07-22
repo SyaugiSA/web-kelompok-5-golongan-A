@@ -26,3 +26,6 @@ Route::group(
         Route::get('aktakelahiran/{user}', 'AKtaLahirController@getAll');
     }
 );
+
+
+Route::put('login', 'AuthController@login');
