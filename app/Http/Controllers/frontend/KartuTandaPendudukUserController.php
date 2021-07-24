@@ -87,7 +87,7 @@ class KartuTandaPendudukUserController extends Controller
     public function getAll($user)
     {
         KartuTandaPenduduk::where('NIK', '=', $user)->exists();
-        $ktp = KartuTandaPenduduk::where('NIK', '=', $user)->get();
-        return response()->json(['ktp' => $ktp], 200);
+        $kartutandapenduduk = KartuTandaPenduduk::where('NIK', '=', $user)->get();
+        return response()->json(['aktakelahiran' => $kartutandapenduduk], 200);
     }
 }

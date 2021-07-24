@@ -28,4 +28,4 @@ Route::group(
 );
 
 
-Route::put('login', 'AuthController@login');
+Route::post('login', 'AuthController@login');

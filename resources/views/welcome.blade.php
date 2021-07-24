@@ -57,7 +57,7 @@
 	<nav class="navbar navbar-expand-lg navigation" id="navbar">
 		<div class="container">
 
-		 	 <a class="navbar-brand" href="welcome.blade.php">
+		 	 <a class="navbar-brand" href="{{Route('welcome')}}}">
 			  	<img src="{{asset('Auth/login/logo_small.png')}}" alt="" class="img-fluid">
 			  </a>
 
